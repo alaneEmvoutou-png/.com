@@ -1,11 +1,11 @@
 
-       <!DOCTYPE html>
+      <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SmartSheet Solution | Solutions Excel Africaines</title>
-  <meta name="description" content="Solutions de gestion sur Excel adaptées au contexte africain, formations et applications personnalisées. Simplifiez votre productivité !">
+  <title>SmartSheet Solution | Applications Excel Intelligentes</title>
+  <meta name="description" content="Solutions de gestion sur Excel, formations et applications personnalisées pour professionnels. Simplifiez votre productivité dès aujourd'hui !">
   
   <!-- Polices Google -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -14,19 +14,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
   <style>
-    /* ===== VARIABLES & RESET - PALETTE AFRICAINE ===== */
+    /* ===== VARIABLES & RESET ===== */
     :root {
-      --primary: #2D1810; /* Brun terreux profond */
-      --secondary: #D4693F; /* Terracotta/orange terre */
-      --accent: #D4AF37; /* Or/doré africain */
-      --accent-light: #F4E8C1; /* Crème/beige sable */
-      --green: #2D5016; /* Vert forêt/savane */
-      --text: #2D1810;
-      --text-light: #5C4033;
+      --primary: #1a1a1a;
+      --secondary: #2563eb; /* Bleu professionnel */
+      --accent: #f0f9ff; /* Bleu très clair */
+      --text: #333;
+      --text-light: #666;
       --white: #ffffff;
-      --warm-bg: #FDF5EB; /* Fond chaud crème */
-      --shadow: 0 10px 30px rgba(45, 24, 16, 0.15);
-      --shadow-hover: 0 20px 40px rgba(212, 105, 63, 0.3);
+      --shadow: 0 10px 30px rgba(0,0,0,0.1);
+      --shadow-hover: 0 20px 40px rgba(37, 99, 235, 0.2);
       --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
     
@@ -35,10 +32,7 @@
     body {
       font-family: 'Poppins', sans-serif;
       color: var(--text);
-      background: var(--warm-bg);
-      background-image: 
-        radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(212, 105, 63, 0.05) 0%, transparent 50%);
+      background: var(--white);
       line-height: 1.6;
       overflow-x: hidden;
     }
@@ -53,87 +47,48 @@
     ul { list-style: none; }
     img { max-width: 100%; display: block; }
     
-    /* ===== MOTIFS AFRICAINS ===== */
-    .african-pattern {
-      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L35 25L60 30L35 35L30 60L25 35L0 30L25 25L30 0Z' fill='%23D4AF37' fill-opacity='0.05'/%3E%3C/svg%3E");
-    }
-    
-    .border-african {
-      border: 3px solid transparent;
-      border-image: linear-gradient(135deg, var(--secondary), var(--accent), var(--green)) 1;
-    }
-    
     /* ===== HEADER & NAVIGATION ===== */
     header {
       position: fixed;
       top: 0;
       width: 100%;
-      background: linear-gradient(135deg, var(--primary) 0%, #4A2C1E 100%);
+      background: rgba(26, 26, 26, 0.95);
       backdrop-filter: blur(10px);
       z-index: 1000;
       padding: 1rem 5%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 4px 20px rgba(45, 24, 16, 0.3);
-      border-bottom: 3px solid var(--accent);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.1);
     }
     
     .logo {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
     }
     
     .logo-icon {
-      width: 50px;
-      height: 50px;
-      background: linear-gradient(135deg, var(--secondary), var(--accent));
+      width: 45px;
+      height: 45px;
+      background: linear-gradient(135deg, var(--secondary), #1d4ed8);
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: var(--white);
       font-weight: bold;
-      font-size: 1.4rem;
-      box-shadow: 0 4px 15px rgba(212, 105, 63, 0.4);
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .logo-icon::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: repeating-linear-gradient(
-        45deg,
-        transparent,
-        transparent 10px,
-        rgba(255,255,255,0.1) 10px,
-        rgba(255,255,255,0.1) 20px
-      );
-      animation: shine 3s infinite;
-    }
-    
-    @keyframes shine {
-      0% { transform: translateX(-100%) translateY(-100%); }
-      100% { transform: translateX(100%) translateY(100%); }
+      font-size: 1.2rem;
     }
     
     .logo-text {
       color: var(--white);
       font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       font-weight: 700;
     }
     
-    .logo-text span { 
-      color: var(--accent);
-      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    }
+    .logo-text span { color: var(--secondary); }
     
     nav ul {
       display: flex;
@@ -154,55 +109,39 @@
       bottom: 0;
       left: 0;
       width: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--accent), var(--secondary));
+      height: 2px;
+      background: var(--secondary);
       transition: var(--transition);
     }
     
     nav a:hover::after { width: 100%; }
-    nav a:hover { color: var(--accent); }
+    nav a:hover { color: var(--secondary); }
     
     .mobile-toggle {
       display: none;
-      color: var(--accent);
+      color: var(--white);
       font-size: 1.5rem;
       cursor: pointer;
     }
     
-    /* ===== HERO SECTION AFRICAINE ===== */
+    /* ===== HERO SECTION ===== */
     .hero {
       min-height: 100vh;
-      background: linear-gradient(135deg, rgba(45,24,16,0.92), rgba(212,105,63,0.88)), 
-                  url('https://images.unsplash.com/photo-1531492746000-8d8c485f671a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+      background: linear-gradient(135deg, rgba(26,26,26,0.92), rgba(37,99,235,0.85)), 
+                  url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
       background-size: cover;
       background-position: center;
-      background-attachment: fixed;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       padding: 2rem;
       color: var(--white);
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 10L60 40L90 50L60 60L50 90L40 60L10 50L40 40L50 10Z' fill='%23D4AF37' fill-opacity='0.1'/%3E%3C/svg%3E");
-      opacity: 0.3;
     }
     
     .hero-content {
-      max-width: 850px;
+      max-width: 800px;
       animation: fadeInUp 1s ease;
-      position: relative;
-      z-index: 1;
     }
     
     @keyframes fadeInUp {
@@ -211,96 +150,73 @@
     }
     
     .hero h1 {
-      font-size: 3.5rem;
+      font-size: 3.2rem;
       margin-bottom: 1rem;
-      text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
-      background: linear-gradient(135deg, var(--white), var(--accent-light));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     }
     
     .hero .slogan {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       font-style: italic;
-      color: var(--accent);
+      color: #93c5fd;
       margin-bottom: 2rem;
       font-weight: 300;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
     }
     
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       margin-bottom: 2.5rem;
       opacity: 0.95;
-      max-width: 700px;
+      max-width: 650px;
       margin-left: auto;
       margin-right: auto;
-      color: var(--accent-light);
     }
     
     .btn {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      padding: 1.1rem 2.5rem;
-      background: linear-gradient(135deg, var(--secondary), var(--accent));
+      padding: 1rem 2.3rem;
+      background: var(--secondary);
       color: var(--white);
       border-radius: 50px;
       font-weight: 600;
-      font-size: 1.05rem;
-      box-shadow: 0 6px 20px rgba(212, 105, 63, 0.4);
+      font-size: 1rem;
+      box-shadow: var(--shadow);
       transition: var(--transition);
-      border: 2px solid transparent;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .btn::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-      transition: 0.5s;
-    }
-    
-    .btn:hover::before {
-      left: 100%;
+      border: 2px solid var(--secondary);
     }
     
     .btn:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 30px rgba(212, 105, 63, 0.5);
+      background: transparent;
+      color: var(--secondary);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
     }
     
     .btn-outline {
       background: transparent;
-      border: 2px solid var(--accent);
+      border: 2px solid var(--white);
       margin-left: 1rem;
-      color: var(--accent);
     }
     
     .btn-outline:hover {
-      background: var(--accent);
+      background: var(--white);
       color: var(--primary);
     }
     
     /* ===== SECTIONS GÉNÉRALES ===== */
     section {
-      padding: 6rem 10%;
+      padding: 5rem 10%;
     }
     
     .section-title {
       text-align: center;
-      margin-bottom: 4.5rem;
-      position: relative;
+      margin-bottom: 4rem;
     }
     
     .section-title h2 {
-      font-size: 2.5rem;
+      font-size: 2.3rem;
       color: var(--primary);
       margin-bottom: 1rem;
       position: relative;
@@ -310,37 +226,25 @@
     .section-title h2::after {
       content: '';
       position: absolute;
-      bottom: -15px;
+      bottom: -10px;
       left: 50%;
       transform: translateX(-50%);
-      width: 80px;
-      height: 4px;
-      background: linear-gradient(90deg, var(--secondary), var(--accent), var(--green));
-      border-radius: 2px;
-    }
-    
-    .section-title h2::before {
-      content: '◆';
-      position: absolute;
-      bottom: -22px;
-      left: 50%;
-      transform: translateX(-50%);
-      color: var(--accent);
-      font-size: 1.2rem;
+      width: 60px;
+      height: 3px;
+      background: var(--secondary);
     }
     
     .section-title p {
       color: var(--text-light);
-      max-width: 650px;
-      margin: 2rem auto 0;
-      font-size: 1.05rem;
+      max-width: 600px;
+      margin: 1.5rem auto 0;
     }
     
-    /* ===== SERVICES/PRODUITS AFRICAINS ===== */
+    /* ===== SERVICES/PRODUITS ===== */
     .products-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-      gap: 2.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.2rem;
     }
     
     .product-card {
@@ -351,39 +255,18 @@
       transition: var(--transition);
       position: relative;
       cursor: pointer;
-      border: 2px solid transparent;
-      background-clip: padding-box;
-    }
-    
-    .product-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      border-radius: 20px;
-      padding: 2px;
-      background: linear-gradient(135deg, var(--secondary), var(--accent), var(--green));
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      opacity: 0.6;
-      transition: opacity 0.3s;
-    }
-    
-    .product-card:hover::before {
-      opacity: 1;
+      border: 1px solid rgba(0,0,0,0.05);
     }
     
     .product-card:hover {
-      transform: translateY(-10px);
+      transform: translateY(-8px);
       box-shadow: var(--shadow-hover);
+      border-color: var(--secondary);
     }
     
     .product-image {
-      height: 230px;
-      background: linear-gradient(135deg, var(--accent-light), #F0E6D2);
+      height: 220px;
+      background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -391,42 +274,28 @@
       overflow: hidden;
     }
     
-    .product-image::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 5L25 20L40 25L25 30L20 45L15 30L0 25L15 20L20 5Z' fill='%23D4AF37' fill-opacity='0.15'/%3E%3C/svg%3E");
-      opacity: 0.5;
-    }
-    
     .product-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform 0.6s ease;
-      position: relative;
-      z-index: 1;
     }
     
     .product-card:hover .product-image img {
-      transform: scale(1.1);
+      transform: scale(1.08);
     }
     
     .product-badge {
       position: absolute;
       top: 1rem;
       right: 1rem;
-      background: linear-gradient(135deg, var(--secondary), var(--accent));
+      background: var(--secondary);
       color: var(--white);
-      padding: 0.4rem 1.2rem;
-      border-radius: 25px;
-      font-size: 0.8rem;
+      padding: 0.3rem 1rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
       font-weight: 600;
       z-index: 2;
-      box-shadow: 0 3px 10px rgba(212, 105, 63, 0.4);
     }
     
     .product-overlay {
@@ -435,13 +304,12 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, rgba(212, 105, 63, 0.9), rgba(212, 175, 55, 0.85));
+      background: rgba(37, 99, 235, 0.85);
       display: flex;
       align-items: center;
       justify-content: center;
       opacity: 0;
       transition: opacity 0.3s ease;
-      z-index: 2;
     }
     
     .product-card:hover .product-overlay {
@@ -451,7 +319,7 @@
     .view-catalog {
       background: var(--white);
       color: var(--secondary);
-      padding: 0.9rem 2rem;
+      padding: 0.8rem 1.8rem;
       border-radius: 50px;
       font-weight: 600;
       display: flex;
@@ -459,8 +327,7 @@
       gap: 8px;
       transform: translateY(20px);
       transition: transform 0.3s ease;
-      font-size: 1rem;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      font-size: 0.95rem;
     }
     
     .product-card:hover .view-catalog {
@@ -468,39 +335,36 @@
     }
     
     .product-info {
-      padding: 1.8rem;
-      position: relative;
-      z-index: 1;
-      background: var(--white);
+      padding: 1.6rem;
     }
     
     .product-info h3 {
-      font-size: 1.4rem;
-      margin-bottom: 0.7rem;
+      font-size: 1.3rem;
+      margin-bottom: 0.6rem;
       color: var(--primary);
     }
     
     .product-info p {
       color: var(--text-light);
-      font-size: 0.95rem;
-      margin-bottom: 1.2rem;
-      line-height: 1.6;
+      font-size: 0.92rem;
+      margin-bottom: 1rem;
+      line-height: 1.5;
     }
     
     .product-price {
-      font-weight: 700;
+      font-weight: 600;
       color: var(--secondary);
-      font-size: 1.2rem;
-      margin-bottom: 1.2rem;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
       display: block;
     }
     
     .explore-btn {
       width: 100%;
-      padding: 1rem;
-      background: linear-gradient(135deg, var(--primary), #4A2C1E);
-      color: var(--accent);
-      border: 2px solid var(--accent);
+      padding: 0.9rem;
+      background: var(--primary);
+      color: var(--white);
+      border: none;
       border-radius: 12px;
       font-weight: 600;
       cursor: pointer;
@@ -509,14 +373,12 @@
       justify-content: center;
       gap: 8px;
       transition: var(--transition);
-      font-size: 1rem;
+      font-size: 0.95rem;
     }
     
     .explore-btn:hover {
-      background: linear-gradient(135deg, var(--secondary), var(--accent));
-      color: var(--white);
-      transform: scale(1.03);
-      box-shadow: 0 5px 15px rgba(212, 105, 63, 0.4);
+      background: var(--secondary);
+      transform: scale(1.02);
     }
     
     /* ===== MODAL CATALOGUE ===== */
@@ -527,7 +389,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(45, 24, 16, 0.9);
+      background: rgba(0,0,0,0.85);
       z-index: 2000;
       overflow-y: auto;
       backdrop-filter: blur(5px);
@@ -549,8 +411,7 @@
       overflow-y: auto;
       position: relative;
       animation: modalSlideIn 0.4s ease;
-      box-shadow: 0 25px 50px rgba(0,0,0,0.4);
-      border: 4px solid var(--accent);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.3);
     }
     
     @keyframes modalSlideIn {
@@ -559,40 +420,37 @@
     }
     
     .modal-header {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      background: linear-gradient(135deg, var(--primary), #374151);
       color: var(--white);
-      padding: 2.2rem 2.5rem;
+      padding: 2rem 2.5rem;
       position: relative;
-      border-radius: 21px 21px 0 0;
-      border-bottom: 4px solid var(--accent);
+      border-radius: 25px 25px 0 0;
     }
     
     .modal-header h2 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.9rem;
+      margin-bottom: 0.4rem;
       display: flex;
       align-items: center;
       gap: 12px;
-      color: var(--accent-light);
     }
     
     .modal-header p {
-      opacity: 0.95;
-      font-size: 1.05rem;
-      color: var(--accent-light);
+      opacity: 0.9;
+      font-size: 1rem;
     }
     
     .modal-close {
       position: absolute;
       top: 1.2rem;
       right: 1.2rem;
-      width: 45px;
-      height: 45px;
-      background: rgba(212, 175, 55, 0.2);
-      border: 2px solid var(--accent);
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.15);
+      border: none;
       border-radius: 50%;
-      color: var(--accent);
-      font-size: 1.4rem;
+      color: var(--white);
+      font-size: 1.3rem;
       cursor: pointer;
       display: flex;
       align-items: center;
@@ -601,458 +459,322 @@
     }
     
     .modal-close:hover {
-      background: var(--accent);
-      color: var(--primary);
+      background: var(--secondary);
       transform: rotate(90deg);
     }
     
     .modal-body {
-      padding: 2.5rem 2.5rem;
-      background: var(--warm-bg);
+      padding: 2rem 2.5rem;
     }
     
     .catalog-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.8rem;
     }
     
     .catalog-item {
       background: var(--white);
-      border-radius: 18px;
+      border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 5px 20px rgba(45, 24, 16, 0.1);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
       transition: var(--transition);
-      border: 2px solid transparent;
-      position: relative;
-    }
-    
-    .catalog-item::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, var(--secondary), var(--accent), var(--green));
+      border: 1px solid rgba(0,0,0,0.05);
     }
     
     .catalog-item:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 15px 35px rgba(212, 105, 63, 0.25);
-      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--secondary);
     }
     
     .catalog-item-image {
-      height: 190px;
-      background: linear-gradient(135deg, var(--accent-light), #F0E6D2);
+      height: 180px;
+      background: linear-gradient(135deg, #f8fafc, #e2e8f0);
       position: relative;
       overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-    
-    .catalog-item-image::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 3L18 12L27 15L18 18L15 27L12 18L3 15L12 12L15 3Z' fill='%23D4AF37' fill-opacity='0.2'/%3E%3C/svg%3E");
     }
     
     .catalog-item-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      position: relative;
-      z-index: 1;
     }
     
     .catalog-item-badge {
       position: absolute;
-      top: 12px;
-      left: 12px;
-      background: linear-gradient(135deg, var(--secondary), var(--accent));
+      top: 10px;
+      left: 10px;
+      background: var(--secondary);
       color: var(--white);
-      padding: 0.35rem 0.9rem;
-      border-radius: 15px;
-      font-size: 0.75rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 12px;
+      font-size: 0.7rem;
       font-weight: 600;
-      z-index: 2;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
     }
     
     .catalog-item-info {
-      padding: 1.5rem;
+      padding: 1.3rem;
     }
     
     .catalog-item-info h4 {
-      font-size: 1.15rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
       color: var(--primary);
     }
     
     .catalog-item-info p {
       color: var(--text-light);
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-      line-height: 1.5;
+      font-size: 0.88rem;
+      margin-bottom: 0.9rem;
+      line-height: 1.4;
     }
     
     .catalog-item-price {
       font-weight: 700;
       color: var(--secondary);
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
+      font-size: 1.15rem;
+      margin-bottom: 0.9rem;
       display: block;
     }
     
     .catalog-order-btn {
       width: 100%;
-      padding: 0.95rem;
-      background: linear-gradient(135deg, #25D366, #128C7E);
+      padding: 0.8rem;
+      background: #25D366;
       color: var(--white);
       border: none;
-      border-radius: 12px;
+      border-radius: 10px;
       font-weight: 600;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
+      gap: 6px;
       transition: var(--transition);
-      font-size: 0.95rem;
-      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+      font-size: 0.9rem;
     }
     
     .catalog-order-btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+      background: #128C7E;
+      transform: scale(1.03);
     }
     
-    /* ===== À PROPOS AFRICAIN ===== */
+    /* ===== À PROPOS ===== */
     .about {
-      background: linear-gradient(135deg, var(--warm-bg), #F5EBD9);
-      position: relative;
-    }
-    
-    .about::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 8L48 32L72 40L48 48L40 72L32 48L8 40L32 32L40 8Z' fill='%23D4AF37' fill-opacity='0.06'/%3E%3C/svg%3E");
-      opacity: 0.5;
+      background: var(--accent);
     }
     
     .about-content {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 4rem;
+      gap: 3.5rem;
       align-items: center;
-      position: relative;
-      z-index: 1;
     }
     
     .about-text h3 {
-      font-size: 2.1rem;
-      margin-bottom: 1.5rem;
+      font-size: 1.9rem;
+      margin-bottom: 1.3rem;
       color: var(--primary);
-      position: relative;
-      display: inline-block;
-    }
-    
-    .about-text h3::after {
-      content: '';
-      position: absolute;
-      bottom: -8px;
-      left: 0;
-      width: 60%;
-      height: 4px;
-      background: linear-gradient(90deg, var(--secondary), var(--accent));
-      border-radius: 2px;
     }
     
     .about-text p {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.3rem;
       color: var(--text-light);
-      font-size: 1.02rem;
-      line-height: 1.8;
+      font-size: 0.98rem;
     }
     
     .values {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      margin-top: 2.5rem;
+      gap: 1.2rem;
+      margin-top: 1.8rem;
     }
     
     .value-item {
       text-align: center;
-      padding: 1.8rem 1.2rem;
+      padding: 1.3rem 1rem;
       background: var(--white);
-      border-radius: 16px;
+      border-radius: 14px;
       box-shadow: var(--shadow);
       transition: var(--transition);
-      border-top: 4px solid var(--accent);
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .value-item::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), transparent);
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-    
-    .value-item:hover::before {
-      opacity: 1;
     }
     
     .value-item:hover {
-      transform: translateY(-5px);
+      transform: translateY(-3px);
       box-shadow: var(--shadow-hover);
     }
     
     .value-item i {
-      font-size: 2rem;
-      background: linear-gradient(135deg, var(--secondary), var(--accent));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 1rem;
-      display: inline-block;
+      font-size: 1.8rem;
+      color: var(--secondary);
+      margin-bottom: 0.8rem;
     }
     
     .value-item h4 {
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
       color: var(--primary);
       font-weight: 600;
     }
     
     .value-item p {
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       color: var(--text-light);
       margin: 0;
     }
     
     .about-image {
-      height: 420px;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      border-radius: 24px;
+      height: 380px;
+      background: linear-gradient(135deg, var(--primary), #374151);
+      border-radius: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--accent);
-      font-size: 5rem;
-      box-shadow: 0 20px 50px rgba(45, 24, 16, 0.3);
+      color: var(--secondary);
+      font-size: 4.5rem;
+      box-shadow: var(--shadow);
       overflow: hidden;
-      position: relative;
-      border: 4px solid var(--accent);
-    }
-    
-    .about-image::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: repeating-linear-gradient(
-        45deg,
-        transparent,
-        transparent 20px,
-        rgba(212, 175, 55, 0.1) 20px,
-        rgba(212, 175, 55, 0.1) 40px
-      );
-      animation: slide 20s linear infinite;
-    }
-    
-    @keyframes slide {
-      0% { transform: translate(0, 0); }
-      100% { transform: translate(50px, 50px); }
     }
     
     .about-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      position: relative;
-      z-index: 1;
     }
     
-    /* ===== CONTACT & WHATSAPP AFRICAIN ===== */
+    /* ===== CONTACT & WHATSAPP ===== */
     .contact {
-      background: linear-gradient(135deg, var(--primary), #4A2C1E);
+      background: var(--primary);
       color: var(--white);
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .contact::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5L35 25L55 30L35 35L30 55L25 35L5 30L25 25L30 5Z' fill='%23D4AF37' fill-opacity='0.05'/%3E%3C/svg%3E");
     }
     
     .contact .section-title h2 {
-      color: var(--accent-light);
+      color: var(--white);
     }
     
     .contact .section-title h2::after {
-      background: linear-gradient(90deg, var(--accent), var(--secondary));
+      background: var(--secondary);
     }
     
     .contact .section-title p {
-      color: rgba(253, 245, 235, 0.9);
+      color: rgba(255,255,255,0.85);
     }
     
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      position: relative;
-      z-index: 1;
+      gap: 3.5rem;
     }
     
     .contact-info {
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+      gap: 1.8rem;
     }
     
     .contact-item {
       display: flex;
       align-items: flex-start;
-      gap: 1.2rem;
-      padding: 1.5rem;
-      background: rgba(255,255,255,0.05);
-      border-radius: 16px;
-      border-left: 4px solid var(--accent);
-      transition: var(--transition);
-    }
-    
-    .contact-item:hover {
-      background: rgba(212, 175, 55, 0.1);
-      transform: translateX(10px);
+      gap: 1rem;
     }
     
     .contact-item i {
-      font-size: 1.6rem;
-      color: var(--accent);
-      min-width: 35px;
+      font-size: 1.4rem;
+      color: var(--secondary);
+      min-width: 30px;
       margin-top: 3px;
     }
     
     .contact-item div h4 {
-      font-size: 1.15rem;
-      margin-bottom: 0.35rem;
+      font-size: 1.05rem;
+      margin-bottom: 0.25rem;
       font-weight: 600;
-      color: var(--accent-light);
     }
     
     .contact-item div p, .contact-item div a {
-      color: rgba(253, 245, 235, 0.95);
-      font-size: 1rem;
+      color: rgba(255,255,255,0.9);
+      font-size: 0.98rem;
     }
     
     .contact-item div a:hover {
-      color: var(--accent);
+      color: var(--secondary);
     }
     
     .whatsapp-box {
       background: rgba(255,255,255,0.08);
-      padding: 2.2rem;
-      border-radius: 24px;
-      border: 3px solid var(--accent);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+      padding: 1.8rem;
+      border-radius: 20px;
+      border: 1px solid rgba(37, 99, 235, 0.4);
     }
     
     .whatsapp-box h3 {
-      font-size: 1.6rem;
-      margin-bottom: 1.2rem;
+      font-size: 1.4rem;
+      margin-bottom: 0.9rem;
       display: flex;
       align-items: center;
-      gap: 12px;
-      color: var(--accent-light);
+      gap: 10px;
     }
     
     .whatsapp-box h3 i {
       color: #25D366;
-      font-size: 1.8rem;
     }
     
     .whatsapp-box p {
-      margin-bottom: 1.6rem;
-      opacity: 0.95;
-      font-size: 1rem;
-      line-height: 1.6;
-      color: rgba(253, 245, 235, 0.95);
+      margin-bottom: 1.3rem;
+      opacity: 0.92;
+      font-size: 0.95rem;
+      line-height: 1.5;
     }
     
     .whatsapp-btn {
       width: 100%;
-      padding: 1.1rem;
-      background: linear-gradient(135deg, #25D366, #128C7E);
+      padding: 0.95rem;
+      background: #25D366;
       color: var(--white);
       border: none;
-      border-radius: 14px;
-      font-weight: 700;
-      font-size: 1.1rem;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1rem;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 12px;
+      gap: 10px;
       transition: var(--transition);
       animation: pulse 2.5s infinite;
-      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
     }
     
     @keyframes pulse {
-      0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
-      50% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+      0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.35); }
+      50% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
     }
     
     .whatsapp-btn:hover {
-      transform: translateY(-3px);
+      background: #128C7E;
+      transform: translateY(-2px);
       animation: none;
-      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
     }
     
     .order-form {
-      margin-top: 1.6rem;
+      margin-top: 1.3rem;
     }
     
     .order-form select, 
     .order-form input, 
     .order-form textarea {
       width: 100%;
-      padding: 1rem;
-      margin-bottom: 1.2rem;
-      border: 2px solid rgba(212, 175, 55, 0.3);
-      border-radius: 12px;
-      background: rgba(255,255,255,0.1);
+      padding: 0.85rem;
+      margin-bottom: 0.9rem;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 10px;
+      background: rgba(255,255,255,0.12);
       color: var(--white);
       font-family: inherit;
-      font-size: 1rem;
-      transition: var(--transition);
+      font-size: 0.95rem;
     }
     
     .order-form select option {
@@ -1061,69 +783,54 @@
     }
     
     .order-form ::placeholder {
-      color: rgba(253, 245, 235, 0.7);
+      color: rgba(255,255,255,0.65);
     }
     
     .order-form select:focus, 
     .order-form input:focus, 
     .order-form textarea:focus {
       outline: none;
-      border-color: var(--accent);
-      background: rgba(255,255,255,0.15);
-      box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.2);
+      border-color: var(--secondary);
+      background: rgba(255,255,255,0.2);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
     }
     
-    /* ===== FOOTER AFRICAIN ===== */
+    /* ===== FOOTER ===== */
     footer {
-      background: linear-gradient(135deg, #1A0F0A, var(--primary));
-      color: rgba(253, 245, 235, 0.8);
+      background: #111;
+      color: rgba(255,255,255,0.7);
       text-align: center;
-      padding: 3rem 2rem;
-      font-size: 0.95rem;
-      border-top: 4px solid var(--accent);
-      position: relative;
-    }
-    
-    footer::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, var(--secondary), var(--accent), var(--green), var(--accent), var(--secondary));
+      padding: 2rem;
+      font-size: 0.9rem;
     }
     
     footer .social-links {
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
-      margin: 1.5rem 0;
+      gap: 1.3rem;
+      margin: 1rem 0;
     }
     
     footer .social-links a {
-      width: 45px;
-      height: 45px;
+      width: 38px;
+      height: 38px;
       border-radius: 50%;
-      background: rgba(212, 175, 55, 0.15);
-      border: 2px solid var(--accent);
+      background: rgba(255,255,255,0.1);
       display: flex;
       align-items: center;
       justify-content: center;
       transition: var(--transition);
-      font-size: 1.1rem;
-      color: var(--accent);
+      font-size: 0.95rem;
     }
     
     footer .social-links a:hover {
-      background: linear-gradient(135deg, var(--secondary), var(--accent));
+      background: var(--secondary);
       color: var(--white);
-      transform: translateY(-5px) rotate(360deg);
-      border-color: transparent;
+      transform: translateY(-3px);
     }
     
     footer p strong {
-      color: var(--accent);
+      color: var(--secondary);
     }
     
     /* ===== RESPONSIVE ===== */
@@ -1135,7 +842,6 @@
       
       .about-image {
         order: -1;
-        height: 350px;
       }
       
       .values {
@@ -1143,29 +849,28 @@
       }
       
       .hero h1 {
-        font-size: 2.8rem;
+        font-size: 2.6rem;
       }
       
       .modal-header h2 {
-        font-size: 1.7rem;
+        font-size: 1.6rem;
       }
     }
     
     @media (max-width: 768px) {
       nav ul {
         position: fixed;
-        top: 75px;
+        top: 70px;
         right: -100%;
-        width: 280px;
-        height: calc(100vh - 75px);
-        background: linear-gradient(135deg, var(--primary), #4A2C1E);
+        width: 260px;
+        height: calc(100vh - 70px);
+        background: var(--primary);
         flex-direction: column;
-        padding: 2.5rem;
-        gap: 1.8rem;
+        padding: 2rem;
+        gap: 1.5rem;
         transition: var(--transition);
-        box-shadow: -5px 0 25px rgba(0,0,0,0.3);
+        box-shadow: -5px 0 20px rgba(0,0,0,0.2);
         z-index: 999;
-        border-left: 3px solid var(--accent);
       }
       
       nav ul.active {
@@ -1178,16 +883,16 @@
       }
       
       .hero h1 {
-        font-size: 2.3rem;
+        font-size: 2.1rem;
       }
       
       .hero .slogan {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
       }
       
       .btn {
-        padding: 1rem 2.2rem;
-        font-size: 0.98rem;
+        padding: 0.85rem 1.9rem;
+        font-size: 0.92rem;
       }
       
       .btn-outline {
@@ -1196,11 +901,11 @@
       }
       
       section {
-        padding: 4.5rem 5%;
+        padding: 4rem 5%;
       }
       
       .section-title h2 {
-        font-size: 2rem;
+        font-size: 1.9rem;
       }
       
       .modal-content {
@@ -1209,11 +914,11 @@
       }
       
       .modal-header {
-        padding: 1.6rem 1.8rem;
+        padding: 1.4rem 1.8rem;
       }
       
       .modal-body {
-        padding: 1.6rem 1.8rem;
+        padding: 1.4rem 1.8rem;
       }
       
       .catalog-grid {
@@ -1227,7 +932,7 @@
     
     @media (max-width: 480px) {
       .hero h1 {
-        font-size: 2rem;
+        font-size: 1.9rem;
       }
       
       .hero p {
@@ -1239,11 +944,7 @@
       }
       
       .logo-text {
-        font-size: 1.2rem;
-      }
-      
-      .section-title h2 {
-        font-size: 1.7rem;
+        font-size: 1.15rem;
       }
     }
     
@@ -1294,8 +995,8 @@
   <section class="hero" id="home">
     <div class="hero-content">
       <h1>SmartSheet Solution</h1>
-      <p class="slogan">« L'excellence africaine au service de votre gestion »</p>
-      <p>Applications de gestion intelligentes sur Excel, formations personnalisées et outils dynamiques conçus pour les entrepreneurs et professionnels africains. Transformez vos données en décisions stratégiques.</p>
+      <p class="slogan">« Simplifiez. Automatisez. Excellez. »</p>
+      <p>Applications de gestion intelligentes sur Excel, formations personnalisées et outils dynamiques pour professionnels. Transformez vos données en décisions stratégiques.</p>
       <div>
         <a href="#services" class="btn">
           <i class="fas fa-rocket"></i> Découvrir
@@ -1309,17 +1010,17 @@
   </section>
 
   <!-- ========== SERVICES ========== -->
-  <section id="services" class="african-pattern">
+  <section id="services">
     <div class="section-title">
       <h2>Nos Solutions</h2>
-      <p>Des outils puissants adaptés au contexte économique africain</p>
+      <p>Cliquez sur une catégorie pour découvrir nos outils et services</p>
     </div>
     
     <div class="products-grid">
       <!-- Applications Excel -->
       <div class="product-card fade-in" onclick="openCatalog('excel')">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1573167243872-43c6433b9d40?w=800&q=80" alt="Applications Excel" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Applications Excel" loading="lazy">
           <span class="product-badge">Populaire</span>
           <div class="product-overlay">
             <div class="view-catalog">
@@ -1329,7 +1030,7 @@
         </div>
         <div class="product-info">
           <h3>Applications Excel</h3>
-          <p>Logiciels de gestion sur-mesure : stocks, ventes, RH, comptabilité. Interface intuitive, formules intelligentes adaptées aux PME africaines.</p>
+          <p>Logiciels de gestion sur-mesure : stocks, ventes, RH, comptabilité. Interface intuitive, formules intelligentes.</p>
           <span class="product-price">À partir de 25 000 FCFA</span>
           <button class="explore-btn" onclick="event.stopPropagation(); openCatalog('excel')">
             <i class="fas fa-table"></i> Explorer
@@ -1340,7 +1041,7 @@
       <!-- Formations -->
       <div class="product-card fade-in" onclick="openCatalog('training')">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1531492746000-8d8c485f671a?w=800&q=80" alt="Formations Excel" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1543269664-76bc3997d9ea?w=800&q=80" alt="Formations Excel" loading="lazy">
           <span class="product-badge">Débutant</span>
           <div class="product-overlay">
             <div class="view-catalog">
@@ -1350,7 +1051,7 @@
         </div>
         <div class="product-info">
           <h3>Formations Excel</h3>
-          <p>De débutant à expert : maîtrisez les tableaux croisés, macros, VBA et l'automatisation. Formations adaptées aux réalités locales.</p>
+          <p>De débutant à expert : maîtrisez les tableaux croisés, macros, VBA et l'automatisation de vos tâches.</p>
           <span class="product-price">À partir de 15 000 FCFA</span>
           <button class="explore-btn" onclick="event.stopPropagation(); openCatalog('training')">
             <i class="fas fa-graduation-cap"></i> Explorer
@@ -1361,7 +1062,7 @@
       <!-- Optimisation de fichiers -->
       <div class="product-card fade-in" onclick="openCatalog('optimization')">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80" alt="Optimisation Excel" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Optimisation Excel" loading="lazy">
           <span class="product-badge">Pro</span>
           <div class="product-overlay">
             <div class="view-catalog">
@@ -1371,7 +1072,7 @@
         </div>
         <div class="product-info">
           <h3>Optimisation de Fichiers</h3>
-          <p>Améliorez vos fichiers existants : sécurisation, automatisation, tableaux de bord dynamiques et rapports automatiques.</p>
+          <p>Améliorez vos fichiers existants : sécurisation, automatisation, tableaux de bord dynamiques et rapports auto.</p>
           <span class="product-price">Sur devis</span>
           <button class="explore-btn" onclick="event.stopPropagation(); openCatalog('optimization')">
             <i class="fas fa-cogs"></i> Explorer
@@ -1382,7 +1083,7 @@
       <!-- Support & Conseil -->
       <div class="product-card fade-in" onclick="openCatalog('support')">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=800&q=80" alt="Support Expert" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" alt="Support Expert" loading="lazy">
           <span class="product-badge">24/7</span>
           <div class="product-overlay">
             <div class="view-catalog">
@@ -1392,7 +1093,7 @@
         </div>
         <div class="product-info">
           <h3>Support & Conseil</h3>
-          <p>Accompagnement personnalisé, audit de vos processus et conseils pour optimiser votre gestion de données dans le contexte africain.</p>
+          <p>Accompagnement personnalisé, audit de vos processus et conseils pour optimiser votre gestion de données.</p>
           <span class="product-price">Consultation gratuite</span>
           <button class="explore-btn" onclick="event.stopPropagation(); openCatalog('support')">
             <i class="fas fa-headset"></i> Explorer
@@ -1407,19 +1108,19 @@
     <div class="modal-content">
       <div class="modal-header">
         <h2><i class="fas fa-table"></i> Applications Excel Intelligentes</h2>
-        <p>Outils conçus pour les entreprises africaines</p>
+        <p>Outils prêts à l'emploi ou personnalisés pour votre activité</p>
         <button class="modal-close" onclick="closeCatalog('excel')" aria-label="Fermer"><i class="fas fa-times"></i></button>
       </div>
       <div class="modal-body">
         <div class="catalog-grid">
           <div class="catalog-item">
             <div class="catalog-item-image">
-              <img src="https://images.unsplash.com/photo-1573167243872-43c6433b9d40?w=600&q=80" alt="Gestion de Stock" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" alt="Gestion de Stock" loading="lazy">
               <span class="catalog-item-badge">Stock</span>
             </div>
             <div class="catalog-item-info">
               <h4>EasyCaisse - Gestion Stock</h4>
-              <p>Suivi des entrées/sorties, alertes seuil, rapports automatiques. Idéal pour commerces et PME africaines.</p>
+              <p>Suivi des entrées/sorties, alertes seuil, rapports automatiques. Idéal commerces et PME.</p>
               <span class="catalog-item-price">35 000 FCFA</span>
               <button class="catalog-order-btn" onclick="orderProduct('EasyCaisse - Gestion Stock', '35 000 FCFA')">
                 <i class="fab fa-whatsapp"></i> Commander
@@ -1429,7 +1130,7 @@
           
           <div class="catalog-item">
             <div class="catalog-item-image">
-              <img src="https://images.unsplash.com/photo-1531492746000-8d8c485f671a?w=600&q=80" alt="Tableau de Bord" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80" alt="Tableau de Bord" loading="lazy">
               <span class="catalog-item-badge">Analytics</span>
             </div>
             <div class="catalog-item-info">
@@ -1444,12 +1145,12 @@
           
           <div class="catalog-item">
             <div class="catalog-item-image">
-              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Gestion RH" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1552581234-26160f608093?w=600&q=80" alt="Gestion RH" loading="lazy">
               <span class="catalog-item-badge">RH</span>
             </div>
             <div class="catalog-item-info">
               <h4>Gestion du Personnel</h4>
-              <p>Fiches employés, congés, paies simplifiées. Conforme aux normes locales camerounaises et africaines.</p>
+              <p>Fiches employés, congés, paies simplifiées. Conforme aux normes locales.</p>
               <span class="catalog-item-price">38 000 FCFA</span>
               <button class="catalog-order-btn" onclick="orderProduct('Gestion du Personnel', '38 000 FCFA')">
                 <i class="fab fa-whatsapp"></i> Commander
@@ -1459,7 +1160,7 @@
           
           <div class="catalog-item">
             <div class="catalog-item-image">
-              <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=600&q=80" alt="Facturation" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?w=600&q=80" alt="Facturation" loading="lazy">
               <span class="catalog-item-badge">Finance</span>
             </div>
             <div class="catalog-item-info">
@@ -1474,7 +1175,7 @@
           
           <div class="catalog-item">
             <div class="catalog-item-image">
-              <img src="https://images.unsplash.com/photo-1573167243872-43c6433b9d40?w=600&q=80" alt="Projet" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80" alt="Projet" loading="lazy">
               <span class="catalog-item-badge">Projet</span>
             </div>
             <div class="catalog-item-info">
@@ -1489,12 +1190,12 @@
           
           <div class="catalog-item">
             <div class="catalog-item-image">
-              <img src="https://images.unsplash.com/photo-1531492746000-8d8c485f671a?w=600&q=80" alt="Personnalisé" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&q=80" alt="Personnalisé" loading="lazy">
               <span class="catalog-item-badge">Sur Mesure</span>
             </div>
             <div class="catalog-item-info">
               <h4>Application Sur Mesure</h4>
-              <p>Vos besoins spécifiques ? Développons ensemble l'outil Excel parfait pour votre activité en Afrique.</p>
+              <p>Vos besoins spécifiques ? Développons ensemble l'outil Excel parfait pour votre activité.</p>
               <span class="catalog-item-price">Sur devis</span>
               <button class="catalog-order-btn" onclick="orderProduct('Application Sur Mesure', 'Sur devis')">
                 <i class="fab fa-whatsapp"></i> Demander un devis
@@ -1518,7 +1219,7 @@
         <div class="catalog-grid">
           <div class="catalog-item">
             <div class="catalog-item-image">
-              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Débutant" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1543269664-76bc3997d9ea?w=600&q=80" alt="Débutant" loading="lazy">
               <span class="catalog-item-badge">Débutant</span>
             </div>
             <div class="catalog-item-info">
@@ -1533,7 +1234,7 @@
           
           <div class="catalog-item">
             <div class="catalog-item-image">
-              <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=600&q=80" alt="Intermédiaire" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&q=80" alt="Intermédiaire" loading="lazy">
               <span class="catalog-item-badge">Intermédiaire</span>
             </div>
             <div class="catalog-item-info">
@@ -1548,7 +1249,7 @@
           
           <div class="catalog-item">
             <div class="catalog-item-image">
-              <img src="https://images.unsplash.com/photo-1573167243872-43c6433b9d40?w=600&q=80" alt="Avancé" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&q=80" alt="Avancé" loading="lazy">
               <span class="catalog-item-badge">Expert</span>
             </div>
             <div class="catalog-item-info">
@@ -1563,7 +1264,7 @@
           
           <div class="catalog-item">
             <div class="catalog-item-image">
-              <img src="https://images.unsplash.com/photo-1531492746000-8d8c485f671a?w=600&q=80" alt="Entreprise" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Entreprise" loading="lazy">
               <span class="catalog-item-badge">Pro</span>
             </div>
             <div class="catalog-item-info">
@@ -1578,7 +1279,7 @@
           
           <div class="catalog-item">
             <div class="catalog-item-image">
-              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Coaching" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&q=80" alt="Coaching" loading="lazy">
               <span class="catalog-item-badge">1-to-1</span>
             </div>
             <div class="catalog-item-info">
@@ -1593,7 +1294,7 @@
           
           <div class="catalog-item">
             <div class="catalog-item-image">
-              <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=600&q=80" alt="Ressources" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80" alt="Ressources" loading="lazy">
               <span class="catalog-item-badge">Gratuit</span>
             </div>
             <div class="catalog-item-info">
@@ -1622,7 +1323,7 @@
         <div class="catalog-grid">
           <div class="catalog-item">
             <div class="catalog-item-image">
-              <img src="https://images.unsplash.com/photo-1573167243872-43c6433b9d40?w=600&q=80" alt="Sécurisation" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="Sécurisation" loading="lazy">
               <span class="catalog-item-badge">Sécurité</span>
             </div>
             <div class="catalog-item-info">
@@ -1637,7 +1338,7 @@
           
           <div class="catalog-item">
             <div class="catalog-item-image">
-              <img src="https://images.unsplash.com/photo-1531492746000-8d8c485f671a?w=600&q=80" alt="Automatisation" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" alt="Automatisation" loading="lazy">
               <span class="catalog-item-badge">Gain de temps</span>
             </div>
             <div class="catalog-item-info">
@@ -1652,7 +1353,7 @@
           
           <div class="catalog-item">
             <div class="catalog-item-image">
-              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Dashboard" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&q=80" alt="Dashboard" loading="lazy">
               <span class="catalog-item-badge">Visuel</span>
             </div>
             <div class="catalog-item-info">
@@ -1667,7 +1368,7 @@
           
           <div class="catalog-item">
             <div class="catalog-item-image">
-              <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=600&q=80" alt="Audit" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" alt="Audit" loading="lazy">
               <span class="catalog-item-badge">Analyse</span>
             </div>
             <div class="catalog-item-info">
@@ -1682,7 +1383,7 @@
           
           <div class="catalog-item">
             <div class="catalog-item-image">
-              <img src="https://images.unsplash.com/photo-1573167243872-43c6433b9d40?w=600&q=80" alt="Rapports" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?w=600&q=80" alt="Rapports" loading="lazy">
               <span class="catalog-item-badge">Pro</span>
             </div>
             <div class="catalog-item-info">
@@ -1697,7 +1398,7 @@
           
           <div class="catalog-item">
             <div class="catalog-item-image">
-              <img src="https://images.unsplash.com/photo-1531492746000-8d8c485f671a?w=600&q=80" alt="Pack Complet" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&q=80" alt="Pack Complet" loading="lazy">
               <span class="catalog-item-badge">Pack</span>
             </div>
             <div class="catalog-item-info">
@@ -1726,7 +1427,7 @@
         <div class="catalog-grid">
           <div class="catalog-item">
             <div class="catalog-item-image">
-              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Consultation" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" alt="Consultation" loading="lazy">
               <span class="catalog-item-badge">Gratuit</span>
             </div>
             <div class="catalog-item-info">
@@ -1756,7 +1457,7 @@
           
           <div class="catalog-item">
             <div class="catalog-item-image">
-              <img src="https://images.unsplash.com/photo-1573167243872-43c6433b9d40?w=600&q=80" alt="Audit" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80" alt="Audit" loading="lazy">
               <span class="catalog-item-badge">Stratégique</span>
             </div>
             <div class="catalog-item-info">
@@ -1771,7 +1472,7 @@
           
           <div class="catalog-item">
             <div class="catalog-item-image">
-              <img src="https://images.unsplash.com/photo-1531492746000-8d8c485f671a?w=600&q=80" alt="Conseil" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&q=80" alt="Conseil" loading="lazy">
               <span class="catalog-item-badge">Expert</span>
             </div>
             <div class="catalog-item-info">
@@ -1786,7 +1487,7 @@
           
           <div class="catalog-item">
             <div class="catalog-item-image">
-              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80" alt="Maintenance" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&q=80" alt="Maintenance" loading="lazy">
               <span class="catalog-item-badge">Tranquillité</span>
             </div>
             <div class="catalog-item-info">
@@ -1801,7 +1502,7 @@
           
           <div class="catalog-item">
             <div class="catalog-item-image">
-              <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=600&q=80" alt="Partenariat" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" alt="Partenariat" loading="lazy">
               <span class="catalog-item-badge">Long terme</span>
             </div>
             <div class="catalog-item-info">
@@ -1822,14 +1523,14 @@
   <section class="about" id="about">
     <div class="section-title">
       <h2>À Propos de SmartSheet Solution</h2>
-      <p>Notre mission : rendre la gestion de données simple, puissante et accessible aux entrepreneurs africains</p>
+      <p>Notre mission : rendre la gestion de données simple, puissante et accessible</p>
     </div>
     
     <div class="about-content">
       <div class="about-text">
-        <h3>Expertise Excel au service de l'Afrique</h3>
-        <p>Chez <strong>SmartSheet Solution</strong>, nous transformons Excel en un véritable outil stratégique pour votre activité. Que vous soyez entrepreneur, manager ou professionnel indépendant au Cameroun ou ailleurs en Afrique, nous concevons des solutions sur-mesure qui simplifient votre quotidien.</p>
-        <p>Notre approche : écouter vos besoins spécifiques au contexte africain, concevoir des outils intuitifs, et vous former pour que vous soyez autonome. Parce que la technologie doit servir l'humain et soutenir le développement de nos entreprises.</p>
+        <h3>Expertise Excel au service de votre réussite</h3>
+        <p>Chez <strong>SmartSheet Solution</strong>, nous transformons Excel en un véritable outil stratégique pour votre activité. Que vous soyez entrepreneur, manager ou professionnel indépendant, nous concevons des solutions sur-mesure qui simplifient votre quotidien.</p>
+        <p>Notre approche : écouter vos besoins, concevoir des outils intuitifs, et vous former pour que vous soyez autonome. Parce que la technologie doit servir l'humain, pas l'inverse.</p>
         
         <div class="values">
           <div class="value-item fade-in">
@@ -1851,7 +1552,7 @@
       </div>
       
       <div class="about-image">
-        <img src="https://images.unsplash.com/photo-1573167243872-43c6433b9d40?w=800&q=80" alt="Expertise Excel Africaine" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Expertise Excel" loading="lazy">
       </div>
     </div>
   </section>
@@ -1893,14 +1594,14 @@
           <i class="fas fa-map-marker-alt"></i>
           <div>
             <h4>Localisation</h4>
-            <p>Cameroun • Services disponibles en ligne & en présentiel<br>Déjà présents à Douala, Yaoundé et Buea</p>
+            <p>Cameroun • Services disponibles en ligne & en présentiel</p>
           </div>
         </div>
       </div>
       
       <div class="whatsapp-box">
         <h3><i class="fab fa-whatsapp"></i> Démarrer votre projet</h3>
-        <p>Décrivez brièvement votre besoin et nous vous recontacterons sous 24h avec une proposition adaptée à votre contexte.</p>
+        <p>Décrivez brièvement votre besoin et nous vous recontacterons sous 24h avec une proposition adaptée.</p>
         
         <div class="order-form">
           <select id="productCategory">
@@ -1925,7 +1626,7 @@
 
   <!-- ========== FOOTER ========== -->
   <footer>
-    <div class="logo" style="justify-content: center; margin-bottom: 1.5rem;">
+    <div class="logo" style="justify-content: center; margin-bottom: 1rem;">
       <div class="logo-icon">
         <i class="fas fa-table"></i>
       </div>
@@ -1948,8 +1649,7 @@
     </div>
     
     <p>&copy; 2026 <strong>SmartSheet Solution</strong>. Tous droits réservés.<br>
-    « L'excellence africaine au service de votre gestion »<br>
-    <small style="color: var(--accent); margin-top: 0.5rem; display: block;">Fièrement conçu au Cameroun 🇨</small></p>
+    « Simplifiez. Automatisez. Excellez. »</p>
   </footer>
 
   <!-- ========== JAVASCRIPT ========== -->
@@ -2047,7 +1747,7 @@
       btn.style.background = '#128C7E';
       setTimeout(() => {
         btn.innerHTML = originalText;
-        btn.style.background = 'linear-gradient(135deg, #25D366, #128C7E)';
+        btn.style.background = '#25D366';
       }, 2000);
     }
     
@@ -2103,7 +1803,7 @@
     document.querySelectorAll('img').forEach(img => {
       img.onerror = function() {
         // Fallback visuel si l'image ne charge pas
-        this.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300"%3E%3Crect fill="%23FDF5EB" width="400" height="300"/%3E%3Cpath d="M200 50L240 150L340 190L240 230L200 330L160 230L60 190L160 150L200 50Z" fill="%23D4AF37" fill-opacity="0.3"/%3E%3Ctext fill="%23D4693F" font-family="Arial" font-size="16" x="50%25" y="50%25" text-anchor="middle" dy=".3em"%3EImage non disponible%3C/text%3E%3C/svg%3E';
+        this.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300"%3E%3Crect fill="%23f0f9ff" width="400" height="300"/%3E%3Ctext fill="%2393c5fd" font-family="Arial" font-size="16" x="50%25" y="50%25" text-anchor="middle" dy=".3em"%3EImage non disponible%3C/text%3E%3C/svg%3E';
         this.alt = 'Image non disponible';
       };
     });
@@ -2114,7 +1814,7 @@
       const style = document.createElement('style');
       style.textContent = `
         a:focus, button:focus, input:focus, select:focus, textarea:focus {
-          outline: 3px solid var(--accent);
+          outline: 2px solid var(--secondary);
           outline-offset: 2px;
         }
         /* Masquer l'outline au clic souris, garder au clavier */
@@ -2127,4 +1827,3 @@
   </script>
 </body>
 </html>
-
