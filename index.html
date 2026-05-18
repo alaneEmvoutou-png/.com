@@ -4,17 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SmartSheet Solution | Applications Excel Intelligentes</title>
-  <meta name="description" content="Solutions de gestion sur Excel, formations et applications personnalisées pour professionnels. Simplifiez votre productivité dès aujourd'hui !">
+  <title>SmartSheet Solution | Applications Excel & Services IT</title>
+  <meta name="description" content="Solutions Excel, formations, maintenance informatique et data analysis. Services professionnels au Cameroun.">
   
-  <!-- Polices Google -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-  
-  <!-- Icônes -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   
   <style>
-    /* ===== VARIABLES & RESET ===== */
     :root {
       --primary: #1a1a1a;
       --secondary: #2563eb;
@@ -28,7 +24,6 @@
     }
     
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    
     body {
       font-family: 'Poppins', sans-serif;
       color: var(--text);
@@ -36,34 +31,21 @@
       line-height: 1.6;
       overflow-x: hidden;
     }
-    
-    h1, h2, h3, h4 {
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-      line-height: 1.3;
-    }
-    
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 700; line-height: 1.3; }
     a { text-decoration: none; color: inherit; transition: var(--transition); }
     ul { list-style: none; }
     img { max-width: 100%; display: block; }
     
-    /* ===== HEADER & NAVIGATION ===== */
     header {
-      position: fixed;
-      top: 0;
-      width: 100%;
+      position: fixed; top: 0; width: 100%;
       background: rgba(26, 26, 26, 0.95);
       backdrop-filter: blur(10px);
       z-index: 1000;
       padding: 1rem 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      display: flex; justify-content: space-between; align-items: center;
       box-shadow: 0 2px 20px rgba(0,0,0,0.1);
     }
-    
     .logo { display: flex; align-items: center; gap: 10px; }
-    
     .logo-icon {
       width: 45px; height: 45px;
       background: linear-gradient(135deg, var(--secondary), #1d4ed8);
@@ -71,66 +53,27 @@
       display: flex; align-items: center; justify-content: center;
       color: var(--white); font-weight: bold; font-size: 1.2rem;
     }
-    
-    .logo-text {
-      color: var(--white);
-      font-family: 'Playfair Display', serif;
-      font-size: 1.3rem; font-weight: 700;
-    }
+    .logo-text { color: var(--white); font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; }
     .logo-text span { color: var(--secondary); }
-    
     nav ul { display: flex; gap: 2rem; }
-    
-    nav a {
-      color: var(--white); font-weight: 500; font-size: 0.95rem;
-      position: relative; padding: 0.5rem 0;
-    }
-    nav a::after {
-      content: ''; position: absolute; bottom: 0; left: 0;
-      width: 0; height: 2px; background: var(--secondary);
-      transition: var(--transition);
-    }
+    nav a { color: var(--white); font-weight: 500; font-size: 0.95rem; position: relative; padding: 0.5rem 0; }
+    nav a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--secondary); transition: var(--transition); }
     nav a:hover::after { width: 100%; }
     nav a:hover { color: var(--secondary); }
+    .mobile-toggle { display: none; color: var(--white); font-size: 1.5rem; cursor: pointer; }
     
-    .mobile-toggle {
-      display: none; color: var(--white);
-      font-size: 1.5rem; cursor: pointer;
-    }
-    
-    /* ===== HERO SECTION ===== */
     .hero {
       min-height: 100vh;
-      background: linear-gradient(135deg, rgba(26,26,26,0.92), rgba(37,99,235,0.85)), 
-                  url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+      background: linear-gradient(135deg, rgba(26,26,26,0.92), rgba(37,99,235,0.85)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&q=80');
       background-size: cover; background-position: center;
       display: flex; align-items: center; justify-content: center;
       text-align: center; padding: 2rem; color: var(--white);
     }
-    
     .hero-content { max-width: 800px; animation: fadeInUp 1s ease; }
-    
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    
-    .hero h1 {
-      font-size: 3.2rem; margin-bottom: 1rem;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    }
-    
-    .hero .slogan {
-      font-size: 1.4rem; font-style: italic;
-      color: #93c5fd; margin-bottom: 2rem; font-weight: 300;
-    }
-    
-    .hero p {
-      font-size: 1.15rem; margin-bottom: 2.5rem;
-      opacity: 0.95; max-width: 650px;
-      margin-left: auto; margin-right: auto;
-    }
-    
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .hero h1 { font-size: 3.2rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+    .hero .slogan { font-size: 1.4rem; font-style: italic; color: #93c5fd; margin-bottom: 2rem; font-weight: 300; }
+    .hero p { font-size: 1.15rem; margin-bottom: 2.5rem; opacity: 0.95; max-width: 650px; margin-left: auto; margin-right: auto; }
     .btn {
       display: inline-flex; align-items: center; gap: 10px;
       padding: 1rem 2.3rem; background: var(--secondary);
@@ -139,73 +82,36 @@
       box-shadow: var(--shadow); transition: var(--transition);
       border: 2px solid var(--secondary);
     }
-    .btn:hover {
-      background: transparent; color: var(--secondary);
-      transform: translateY(-3px); box-shadow: var(--shadow-hover);
-    }
-    .btn-outline {
-      background: transparent; border: 2px solid var(--white);
-      margin-left: 1rem;
-    }
-    .btn-outline:hover {
-      background: var(--white); color: var(--primary);
-    }
+    .btn:hover { background: transparent; color: var(--secondary); transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+    .btn-outline { background: transparent; border: 2px solid var(--white); margin-left: 1rem; }
+    .btn-outline:hover { background: var(--white); color: var(--primary); }
     
-    /* ===== SECTIONS GÉNÉRALES ===== */
     section { padding: 5rem 10%; }
+    .section-title { text-align: center; margin-bottom: 4rem; }
+    .section-title h2 { font-size: 2.3rem; color: var(--primary); margin-bottom: 1rem; position: relative; display: inline-block; }
+    .section-title h2::after { content: ''; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 60px; height: 3px; background: var(--secondary); }
+    .section-title p { color: var(--text-light); max-width: 600px; margin: 1.5rem auto 0; }
     
-    .section-title {
-      text-align: center; margin-bottom: 4rem;
-    }
-    .section-title h2 {
-      font-size: 2.3rem; color: var(--primary);
-      margin-bottom: 1rem; position: relative; display: inline-block;
-    }
-    .section-title h2::after {
-      content: ''; position: absolute; bottom: -10px; left: 50%;
-      transform: translateX(-50%); width: 60px; height: 3px;
-      background: var(--secondary);
-    }
-    .section-title p {
-      color: var(--text-light); max-width: 600px;
-      margin: 1.5rem auto 0;
-    }
-    
-    /* ===== SERVICES/PRODUITS ===== */
-    .products-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2.2rem;
-    }
-    
+    .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.2rem; }
     .product-card {
-      background: var(--white); border-radius: 20px;
-      overflow: hidden; box-shadow: var(--shadow);
-      transition: var(--transition); position: relative;
-      cursor: pointer; border: 1px solid rgba(0,0,0,0.05);
+      background: var(--white); border-radius: 20px; overflow: hidden;
+      box-shadow: var(--shadow); transition: var(--transition);
+      position: relative; cursor: pointer; border: 1px solid rgba(0,0,0,0.05);
     }
-    .product-card:hover {
-      transform: translateY(-8px); box-shadow: var(--shadow-hover);
-      border-color: var(--secondary);
-    }
-    
+    .product-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); border-color: var(--secondary); }
     .product-image {
       height: 220px; background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
       display: flex; align-items: center; justify-content: center;
       position: relative; overflow: hidden;
     }
-    .product-image img {
-      width: 100%; height: 100%; object-fit: cover;
-      transition: transform 0.6s ease;
-    }
+    .product-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
     .product-card:hover .product-image img { transform: scale(1.08); }
-    
     .product-badge {
       position: absolute; top: 1rem; right: 1rem;
       background: var(--secondary); color: var(--white);
       padding: 0.3rem 1rem; border-radius: 20px;
       font-size: 0.75rem; font-weight: 600; z-index: 2;
     }
-    
     .product-overlay {
       position: absolute; top: 0; left: 0; width: 100%; height: 100%;
       background: rgba(37, 99, 235, 0.85);
@@ -213,7 +119,6 @@
       opacity: 0; transition: opacity 0.3s ease;
     }
     .product-card:hover .product-overlay { opacity: 1; }
-    
     .view-catalog {
       background: var(--white); color: var(--secondary);
       padding: 0.8rem 1.8rem; border-radius: 50px;
@@ -222,20 +127,10 @@
       font-size: 0.95rem;
     }
     .product-card:hover .view-catalog { transform: translateY(0); }
-    
     .product-info { padding: 1.6rem; }
-    .product-info h3 {
-      font-size: 1.3rem; margin-bottom: 0.6rem; color: var(--primary);
-    }
-    .product-info p {
-      color: var(--text-light); font-size: 0.92rem;
-      margin-bottom: 1rem; line-height: 1.5;
-    }
-    .product-price {
-      font-weight: 600; color: var(--secondary);
-      font-size: 1.1rem; margin-bottom: 1rem; display: block;
-    }
-    
+    .product-info h3 { font-size: 1.3rem; margin-bottom: 0.6rem; color: var(--primary); }
+    .product-info p { color: var(--text-light); font-size: 0.92rem; margin-bottom: 1rem; line-height: 1.5; }
+    .product-price { font-weight: 600; color: var(--secondary); font-size: 1.1rem; margin-bottom: 1rem; display: block; }
     .explore-btn {
       width: 100%; padding: 0.9rem; background: var(--primary);
       color: var(--white); border: none; border-radius: 12px;
@@ -243,21 +138,14 @@
       display: flex; align-items: center; justify-content: center; gap: 8px;
       transition: var(--transition); font-size: 0.95rem;
     }
-    .explore-btn:hover {
-      background: var(--secondary); transform: scale(1.02);
-    }
+    .explore-btn:hover { background: var(--secondary); transform: scale(1.02); }
     
-    /* ===== MODAL CATALOGUE ===== */
     .modal {
       display: none; position: fixed; top: 0; left: 0;
       width: 100%; height: 100%; background: rgba(0,0,0,0.85);
       z-index: 2000; overflow-y: auto; backdrop-filter: blur(5px);
     }
-    .modal.active {
-      display: flex; align-items: center; justify-content: center;
-      padding: 1.5rem;
-    }
-    
+    .modal.active { display: flex; align-items: center; justify-content: center; padding: 1.5rem; }
     .modal-content {
       background: var(--white); border-radius: 25px;
       max-width: 1100px; width: 100%; max-height: 90vh;
@@ -265,23 +153,14 @@
       animation: modalSlideIn 0.4s ease;
       box-shadow: 0 25px 50px rgba(0,0,0,0.3);
     }
-    
-    @keyframes modalSlideIn {
-      from { opacity: 0; transform: translateY(-50px) scale(0.95); }
-      to { opacity: 1; transform: translateY(0) scale(1); }
-    }
-    
+    @keyframes modalSlideIn { from { opacity: 0; transform: translateY(-50px) scale(0.95); } to { opacity: 1; transform: translateY(0) scale(1); } }
     .modal-header {
       background: linear-gradient(135deg, var(--primary), #374151);
       color: var(--white); padding: 2rem 2.5rem;
       position: relative; border-radius: 25px 25px 0 0;
     }
-    .modal-header h2 {
-      font-size: 1.9rem; margin-bottom: 0.4rem;
-      display: flex; align-items: center; gap: 12px;
-    }
+    .modal-header h2 { font-size: 1.9rem; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 12px; }
     .modal-header p { opacity: 0.9; font-size: 1rem; }
-    
     .modal-close {
       position: absolute; top: 1.2rem; right: 1.2rem;
       width: 40px; height: 40px; background: rgba(255,255,255,0.15);
@@ -290,55 +169,31 @@
       display: flex; align-items: center; justify-content: center;
       transition: var(--transition);
     }
-    .modal-close:hover {
-      background: var(--secondary); transform: rotate(90deg);
-    }
-    
+    .modal-close:hover { background: var(--secondary); transform: rotate(90deg); }
     .modal-body { padding: 2rem 2.5rem; }
-    
-    .catalog-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 1.8rem;
-    }
-    
+    .catalog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.8rem; }
     .catalog-item {
       background: var(--white); border-radius: 16px;
       overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08);
       transition: var(--transition); border: 1px solid rgba(0,0,0,0.05);
     }
-    .catalog-item:hover {
-      transform: translateY(-4px); box-shadow: var(--shadow-hover);
-      border-color: var(--secondary);
-    }
-    
+    .catalog-item:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: var(--secondary); }
     .catalog-item-image {
       height: 180px; background: linear-gradient(135deg, #f8fafc, #e2e8f0);
       position: relative; overflow: hidden;
       display: flex; align-items: center; justify-content: center;
     }
-    .catalog-item-image img {
-      width: 100%; height: 100%; object-fit: cover;
-    }
+    .catalog-item-image img { width: 100%; height: 100%; object-fit: cover; }
     .catalog-item-badge {
       position: absolute; top: 10px; left: 10px;
       background: var(--secondary); color: var(--white);
       padding: 0.25rem 0.7rem; border-radius: 12px;
       font-size: 0.7rem; font-weight: 600;
     }
-    
     .catalog-item-info { padding: 1.3rem; }
-    .catalog-item-info h4 {
-      font-size: 1.1rem; margin-bottom: 0.4rem; color: var(--primary);
-    }
-    .catalog-item-info p {
-      color: var(--text-light); font-size: 0.88rem;
-      margin-bottom: 0.9rem; line-height: 1.4;
-    }
-    .catalog-item-price {
-      font-weight: 700; color: var(--secondary);
-      font-size: 1.15rem; margin-bottom: 0.9rem; display: block;
-    }
-    
+    .catalog-item-info h4 { font-size: 1.1rem; margin-bottom: 0.4rem; color: var(--primary); }
+    .catalog-item-info p { color: var(--text-light); font-size: 0.88rem; margin-bottom: 0.9rem; line-height: 1.4; }
+    .catalog-item-price { font-weight: 700; color: var(--secondary); font-size: 1.15rem; margin-bottom: 0.9rem; display: block; }
     .catalog-order-btn {
       width: 100%; padding: 0.8rem; background: #25D366;
       color: var(--white); border: none; border-radius: 10px;
@@ -346,101 +201,48 @@
       display: flex; align-items: center; justify-content: center; gap: 6px;
       transition: var(--transition); font-size: 0.9rem;
     }
-    .catalog-order-btn:hover {
-      background: #128C7E; transform: scale(1.03);
-    }
+    .catalog-order-btn:hover { background: #128C7E; transform: scale(1.03); }
     
-    /* ===== À PROPOS ===== */
     .about { background: var(--accent); }
-    
-    .about-content {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 3.5rem; align-items: center;
-    }
-    
-    .about-text h3 {
-      font-size: 1.9rem; margin-bottom: 1.3rem; color: var(--primary);
-    }
-    .about-text p {
-      margin-bottom: 1.3rem; color: var(--text-light);
-      font-size: 0.98rem;
-    }
-    
-    .values {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 1.2rem; margin-top: 1.8rem;
-    }
+    .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; }
+    .about-text h3 { font-size: 1.9rem; margin-bottom: 1.3rem; color: var(--primary); }
+    .about-text p { margin-bottom: 1.3rem; color: var(--text-light); font-size: 0.98rem; }
+    .values { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 1.8rem; }
     .value-item {
       text-align: center; padding: 1.3rem 1rem;
       background: var(--white); border-radius: 14px;
       box-shadow: var(--shadow); transition: var(--transition);
     }
-    .value-item:hover {
-      transform: translateY(-3px); box-shadow: var(--shadow-hover);
-    }
-    .value-item i {
-      font-size: 1.8rem; color: var(--secondary);
-      margin-bottom: 0.8rem;
-    }
-    .value-item h4 {
-      font-size: 1rem; margin-bottom: 0.4rem;
-      color: var(--primary); font-weight: 600;
-    }
-    .value-item p {
-      font-size: 0.85rem; color: var(--text-light); margin: 0;
-    }
-    
+    .value-item:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+    .value-item i { font-size: 1.8rem; color: var(--secondary); margin-bottom: 0.8rem; }
+    .value-item h4 { font-size: 1rem; margin-bottom: 0.4rem; color: var(--primary); font-weight: 600; }
+    .value-item p { font-size: 0.85rem; color: var(--text-light); margin: 0; }
     .about-image {
       height: 380px; background: linear-gradient(135deg, var(--primary), #374151);
       border-radius: 20px; display: flex; align-items: center;
       justify-content: center; color: var(--secondary);
       font-size: 4.5rem; box-shadow: var(--shadow); overflow: hidden;
     }
-    .about-image img {
-      width: 100%; height: 100%; object-fit: cover;
-    }
+    .about-image img { width: 100%; height: 100%; object-fit: cover; }
     
-    /* ===== CONTACT & WHATSAPP ===== */
     .contact { background: var(--primary); color: var(--white); }
     .contact .section-title h2 { color: var(--white); }
     .contact .section-title h2::after { background: var(--secondary); }
     .contact .section-title p { color: rgba(255,255,255,0.85); }
-    
-    .contact-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem;
-    }
-    
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; }
     .contact-info { display: flex; flex-direction: column; gap: 1.8rem; }
-    
-    .contact-item {
-      display: flex; align-items: flex-start; gap: 1rem;
-    }
-    .contact-item i {
-      font-size: 1.4rem; color: var(--secondary);
-      min-width: 30px; margin-top: 3px;
-    }
-    .contact-item div h4 {
-      font-size: 1.05rem; margin-bottom: 0.25rem; font-weight: 600;
-    }
-    .contact-item div p, .contact-item div a {
-      color: rgba(255,255,255,0.9); font-size: 0.98rem;
-    }
+    .contact-item { display: flex; align-items: flex-start; gap: 1rem; }
+    .contact-item i { font-size: 1.4rem; color: var(--secondary); min-width: 30px; margin-top: 3px; }
+    .contact-item div h4 { font-size: 1.05rem; margin-bottom: 0.25rem; font-weight: 600; }
+    .contact-item div p, .contact-item div a { color: rgba(255,255,255,0.9); font-size: 0.98rem; }
     .contact-item div a:hover { color: var(--secondary); }
-    
     .whatsapp-box {
       background: rgba(255,255,255,0.08); padding: 1.8rem;
       border-radius: 20px; border: 1px solid rgba(37, 99, 235, 0.4);
     }
-    .whatsapp-box h3 {
-      font-size: 1.4rem; margin-bottom: 0.9rem;
-      display: flex; align-items: center; gap: 10px;
-    }
+    .whatsapp-box h3 { font-size: 1.4rem; margin-bottom: 0.9rem; display: flex; align-items: center; gap: 10px; }
     .whatsapp-box h3 i { color: #25D366; }
-    .whatsapp-box p {
-      margin-bottom: 1.3rem; opacity: 0.92;
-      font-size: 0.95rem; line-height: 1.5;
-    }
-    
+    .whatsapp-box p { margin-bottom: 1.3rem; opacity: 0.92; font-size: 0.95rem; line-height: 1.5; }
     .whatsapp-btn {
       width: 100%; padding: 0.95rem; background: #25D366;
       color: var(--white); border: none; border-radius: 12px;
@@ -448,15 +250,11 @@
       display: flex; align-items: center; justify-content: center; gap: 10px;
       transition: var(--transition); animation: pulse 2.5s infinite;
     }
-    
     @keyframes pulse {
       0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.35); }
       50% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
     }
-    .whatsapp-btn:hover {
-      background: #128C7E; transform: translateY(-2px); animation: none;
-    }
-    
+    .whatsapp-btn:hover { background: #128C7E; transform: translateY(-2px); animation: none; }
     .order-form { margin-top: 1.3rem; }
     .order-form select, .order-form input, .order-form textarea {
       width: 100%; padding: 0.85rem; margin-bottom: 0.9rem;
@@ -472,37 +270,27 @@
       box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
     }
     
-    /* ===== FOOTER ===== */
     footer {
       background: #111; color: rgba(255,255,255,0.7);
       text-align: center; padding: 2rem; font-size: 0.9rem;
     }
-    footer .social-links {
-      display: flex; justify-content: center; gap: 1.3rem; margin: 1rem 0;
-    }
+    footer .social-links { display: flex; justify-content: center; gap: 1.3rem; margin: 1rem 0; }
     footer .social-links a {
       width: 38px; height: 38px; border-radius: 50%;
       background: rgba(255,255,255,0.1); display: flex;
       align-items: center; justify-content: center;
       transition: var(--transition); font-size: 0.95rem;
     }
-    footer .social-links a:hover {
-      background: var(--secondary); color: var(--white);
-      transform: translateY(-3px);
-    }
+    footer .social-links a:hover { background: var(--secondary); color: var(--white); transform: translateY(-3px); }
     footer p strong { color: var(--secondary); }
     
-    /* ===== RESPONSIVE ===== */
     @media (max-width: 992px) {
-      .about-content, .contact-grid {
-        grid-template-columns: 1fr; text-align: center;
-      }
+      .about-content, .contact-grid { grid-template-columns: 1fr; text-align: center; }
       .about-image { order: -1; }
       .values { grid-template-columns: 1fr; }
       .hero h1 { font-size: 2.6rem; }
       .modal-header h2 { font-size: 1.6rem; }
     }
-    
     @media (max-width: 768px) {
       nav ul {
         position: fixed; top: 70px; right: -100%;
@@ -525,7 +313,6 @@
       .catalog-grid { grid-template-columns: 1fr; }
       .values { grid-template-columns: repeat(2, 1fr); }
     }
-    
     @media (max-width: 480px) {
       .hero h1 { font-size: 1.9rem; }
       .hero p { font-size: 1.05rem; }
@@ -533,18 +320,13 @@
       .logo-text { font-size: 1.15rem; }
     }
     
-    /* ===== UTILS ===== */
     .text-center { text-align: center; }
     .mt-2 { margin-top: 2rem; }
     .hidden { display: none; }
-    
-    .fade-in {
-      opacity: 0; transform: translateY(25px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
+    .fade-in { opacity: 0; transform: translateY(25px); transition: opacity 0.6s ease, transform 0.6s ease; }
     .fade-in.visible { opacity: 1; transform: translateY(0); }
     
-    /* ===== ARTEMIS CHATBOT STYLES ===== */
+    /* ARTEMIS CHATBOT */
     #artemis-chat-toggle {
       position: fixed; bottom: 25px; right: 25px;
       width: 60px; height: 60px; border-radius: 50%;
@@ -555,16 +337,7 @@
       justify-content: center; z-index: 9999;
       transition: all 0.3s ease; animation: pulse 2s infinite;
     }
-    #artemis-chat-toggle:hover {
-      transform: scale(1.1);
-      box-shadow: 0 6px 25px rgba(102, 126, 234, 0.6);
-    }
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7); }
-      70% { box-shadow: 0 0 0 15px rgba(102, 126, 234, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(102, 126, 234, 0); }
-    }
-    
+    #artemis-chat-toggle:hover { transform: scale(1.1); box-shadow: 0 6px 25px rgba(102, 126, 234, 0.6); }
     #artemis-chat-window {
       position: fixed; bottom: 95px; right: 25px;
       width: 380px; max-height: 550px; background: white;
@@ -573,11 +346,7 @@
       overflow: hidden; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       animation: slideUp 0.3s ease;
     }
-    @keyframes slideUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    
+    @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     .artemis-header {
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       color: white; padding: 15px 20px;
@@ -597,7 +366,6 @@
       opacity: 0.8; transition: opacity 0.2s;
     }
     .artemis-close:hover { opacity: 1; }
-    
     .artemis-messages {
       flex: 1; padding: 15px; overflow-y: auto;
       background: #f8f9ff; display: flex;
@@ -608,10 +376,7 @@
       border-radius: 18px; font-size: 14px;
       line-height: 1.4; animation: fadeIn 0.2s ease;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(5px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
     .artemis-bot {
       align-self: flex-start; background: white;
       border: 1px solid #e0e4ff; border-bottom-left-radius: 5px;
@@ -639,7 +404,6 @@
       0%, 80%, 100% { transform: scale(0); }
       40% { transform: scale(1); }
     }
-    
     .artemis-input-area {
       padding: 12px 15px; background: white;
       border-top: 1px solid #eee; display: flex; gap: 10px;
@@ -658,7 +422,6 @@
       font-size: 18px; transition: transform 0.2s;
     }
     #artemis-send:hover { transform: scale(1.05); }
-    
     .artemis-quick-replies {
       display: flex; flex-wrap: wrap; gap: 8px;
       padding: 10px 15px; background: white;
@@ -673,21 +436,15 @@
     .artemis-quick-reply:hover {
       background: #667eea; color: white; border-color: #667eea;
     }
-    .artemis-link {
-      color: #667eea; text-decoration: none; font-weight: 500;
-    }
+    .artemis-link { color: #667eea; text-decoration: none; font-weight: 500; }
     .artemis-link:hover { text-decoration: underline; }
-    
     @media (max-width: 480px) {
-      #artemis-chat-window {
-        width: calc(100vw - 40px); right: 20px; bottom: 90px;
-      }
+      #artemis-chat-window { width: calc(100vw - 40px); right: 20px; bottom: 90px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ========== HEADER ========== -->
   <header>
     <div class="logo">
       <div class="logo-icon"><i class="fas fa-table"></i></div>
@@ -701,86 +458,112 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <div class="mobile-toggle" id="mobileToggle" aria-label="Menu">
-      <i class="fas fa-bars"></i>
-    </div>
+    <div class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></div>
   </header>
 
-  <!-- ========== HERO ========== -->
   <section class="hero" id="home">
     <div class="hero-content">
       <h1>SmartSheet Solution</h1>
       <p class="slogan">« Simplifiez. Automatisez. Excellez. »</p>
-      <p>Applications de gestion intelligentes sur Excel, formations personnalisées et outils dynamiques pour professionnels. Transformez vos données en décisions stratégiques.</p>
+      <p>Applications Excel, formations, maintenance informatique et data analysis. Solutions professionnelles complètes pour votre entreprise.</p>
       <div>
         <a href="#services" class="btn"><i class="fas fa-rocket"></i> Découvrir</a>
-        <a href="https://wa.me/237656035929?text=Bonjour%20SmartSheet%20Solution%2C%20je%20souhaite%20plus%20d%27informations%20sur%20vos%20services." 
-           class="btn btn-outline" target="_blank" rel="noopener">
-          <i class="fab fa-whatsapp"></i> Nous Contacter
-        </a>
+        <a href="https://wa.me/237656035929" class="btn btn-outline" target="_blank"><i class="fab fa-whatsapp"></i> Nous Contacter</a>
       </div>
     </div>
   </section>
 
-  <!-- ========== SERVICES ========== -->
   <section id="services">
     <div class="section-title">
       <h2>Nos Solutions</h2>
-      <p>Cliquez sur une catégorie pour découvrir nos outils et services</p>
+      <p>6 domaines d'expertise pour répondre à tous vos besoins digitaux</p>
     </div>
     <div class="products-grid">
       <!-- Applications Excel -->
       <div class="product-card fade-in" onclick="openCatalog('excel')">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Applications Excel" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Applications Excel">
           <span class="product-badge">Populaire</span>
-          <div class="product-overlay"><div class="view-catalog"><i class="fas fa-eye"></i> Voir les outils</div></div>
+          <div class="product-overlay"><div class="view-catalog"><i class="fas fa-eye"></i> Voir</div></div>
         </div>
         <div class="product-info">
           <h3>Applications Excel</h3>
-          <p>Logiciels de gestion sur-mesure : stocks, ventes, RH, comptabilité. Interface intuitive, formules intelligentes.</p>
+          <p>Logiciels de gestion sur-mesure : stocks, ventes, RH, comptabilité.</p>
           <span class="product-price">À partir de 25 000 FCFA</span>
           <button class="explore-btn" onclick="event.stopPropagation(); openCatalog('excel')"><i class="fas fa-table"></i> Explorer</button>
         </div>
       </div>
-      <!-- Formations -->
+      
+      <!-- Formations Excel -->
       <div class="product-card fade-in" onclick="openCatalog('training')">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1543269664-76bc3997d9ea?w=800&q=80" alt="Formations Excel" loading="lazy">
-          <span class="product-badge">Débutant</span>
-          <div class="product-overlay"><div class="view-catalog"><i class="fas fa-eye"></i> Voir les formations</div></div>
+          <img src="https://images.unsplash.com/photo-1543269664-76bc3997d9ea?w=800&q=80" alt="Formations">
+          <span class="product-badge">Nouveau Prix</span>
+          <div class="product-overlay"><div class="view-catalog"><i class="fas fa-eye"></i> Voir</div></div>
         </div>
         <div class="product-info">
           <h3>Formations Excel</h3>
-          <p>De débutant à expert : maîtrisez les tableaux croisés, macros, VBA et l'automatisation de vos tâches.</p>
-          <span class="product-price">À partir de 15 000 FCFA</span>
+          <p>De débutant à expert : tableaux croisés, macros, VBA, automatisation.</p>
+          <span class="product-price">À partir de 50 000 FCFA</span>
           <button class="explore-btn" onclick="event.stopPropagation(); openCatalog('training')"><i class="fas fa-graduation-cap"></i> Explorer</button>
         </div>
       </div>
+      
+      <!-- Maintenance IT -->
+      <div class="product-card fade-in" onclick="openCatalog('maintenance')">
+        <div class="product-image">
+          <img src="https://images.unsplash.com/photo-1597872252165-4827e15293ab?w=800&q=80" alt="Maintenance IT">
+          <span class="product-badge">Software</span>
+          <div class="product-overlay"><div class="view-catalog"><i class="fas fa-eye"></i> Voir</div></div>
+        </div>
+        <div class="product-info">
+          <h3>Maintenance Informatique</h3>
+          <p>Installation, dépannage, optimisation et maintenance de vos logiciels et systèmes.</p>
+          <span class="product-price">À partir de 30 000 FCFA</span>
+          <button class="explore-btn" onclick="event.stopPropagation(); openCatalog('maintenance')"><i class="fas fa-tools"></i> Explorer</button>
+        </div>
+      </div>
+      
+      <!-- Data Analyst -->
+      <div class="product-card fade-in" onclick="openCatalog('data')">
+        <div class="product-image">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Data Analyst">
+          <span class="product-badge">Analytics</span>
+          <div class="product-overlay"><div class="view-catalog"><i class="fas fa-eye"></i> Voir</div></div>
+        </div>
+        <div class="product-info">
+          <h3>Data Analyst</h3>
+          <p>Analyse de données, tableaux de bord interactifs, rapports analytiques automatisés.</p>
+          <span class="product-price">À partir de 30 000 FCFA</span>
+          <button class="explore-btn" onclick="event.stopPropagation(); openCatalog('data')"><i class="fas fa-chart-line"></i> Explorer</button>
+        </div>
+      </div>
+      
       <!-- Optimisation -->
       <div class="product-card fade-in" onclick="openCatalog('optimization')">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Optimisation Excel" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Optimisation">
           <span class="product-badge">Pro</span>
-          <div class="product-overlay"><div class="view-catalog"><i class="fas fa-eye"></i> Voir les services</div></div>
+          <div class="product-overlay"><div class="view-catalog"><i class="fas fa-eye"></i> Voir</div></div>
         </div>
         <div class="product-info">
-          <h3>Optimisation de Fichiers</h3>
-          <p>Améliorez vos fichiers existants : sécurisation, automatisation, tableaux de bord dynamiques et rapports auto.</p>
+          <h3>Optimisation Fichiers</h3>
+          <p>Améliorez vos fichiers Excel : sécurisation, automatisation, dashboards.</p>
           <span class="product-price">Sur devis</span>
           <button class="explore-btn" onclick="event.stopPropagation(); openCatalog('optimization')"><i class="fas fa-cogs"></i> Explorer</button>
         </div>
       </div>
+      
       <!-- Support -->
       <div class="product-card fade-in" onclick="openCatalog('support')">
         <div class="product-image">
-          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" alt="Support Expert" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" alt="Support">
           <span class="product-badge">24/7</span>
-          <div class="product-overlay"><div class="view-catalog"><i class="fas fa-eye"></i> Voir le support</div></div>
+          <div class="product-overlay"><div class="view-catalog"><i class="fas fa-eye"></i> Voir</div></div>
         </div>
         <div class="product-info">
           <h3>Support & Conseil</h3>
-          <p>Accompagnement personnalisé, audit de vos processus et conseils pour optimiser votre gestion de données.</p>
+          <p>Accompagnement personnalisé, audit de processus et conseils experts.</p>
           <span class="product-price">Consultation gratuite</span>
           <button class="explore-btn" onclick="event.stopPropagation(); openCatalog('support')"><i class="fas fa-headset"></i> Explorer</button>
         </div>
@@ -788,49 +571,321 @@
     </div>
   </section>
 
-  <!-- ========== MODALS (abrégés pour concision - gardez vos modals existants) ========== -->
+  <!-- MODAL EXCEL -->
   <div id="catalog-excel" class="modal">
     <div class="modal-content">
       <div class="modal-header">
         <h2><i class="fas fa-table"></i> Applications Excel Intelligentes</h2>
-        <p>Outils prêts à l'emploi ou personnalisés pour votre activité</p>
-        <button class="modal-close" onclick="closeCatalog('excel')" aria-label="Fermer"><i class="fas fa-times"></i></button>
+        <p>Outils prêts à l'emploi ou personnalisés</p>
+        <button class="modal-close" onclick="closeCatalog('excel')"><i class="fas fa-times"></i></button>
       </div>
-      <div class="modal-body"><div class="catalog-grid"><!-- Vos items catalogue ici --></div></div>
+      <div class="modal-body">
+        <div class="catalog-grid">
+          <div class="catalog-item">
+            <div class="catalog-item-image"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80"><span class="catalog-item-badge">Stock</span></div>
+            <div class="catalog-item-info">
+              <h4>EasyCaisse - Gestion Stock</h4>
+              <p>Suivi entrées/sorties, alertes seuil, rapports automatiques.</p>
+              <span class="catalog-item-price">35 000 FCFA</span>
+              <button class="catalog-order-btn" onclick="orderProduct('EasyCaisse - Gestion Stock', '35 000 FCFA')"><i class="fab fa-whatsapp"></i> Commander</button>
+            </div>
+          </div>
+          <div class="catalog-item">
+            <div class="catalog-item-image"><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80"><span class="catalog-item-badge">Analytics</span></div>
+            <div class="catalog-item-info">
+              <h4>Tableau de Bord Commercial</h4>
+              <p>Visualisez ventes, CA, marges en temps réel. Graphiques interactifs.</p>
+              <span class="catalog-item-price">42 000 FCFA</span>
+              <button class="catalog-order-btn" onclick="orderProduct('Tableau de Bord Commercial', '42 000 FCFA')"><i class="fab fa-whatsapp"></i> Commander</button>
+            </div>
+          </div>
+          <div class="catalog-item">
+            <div class="catalog-item-image"><img src="https://images.unsplash.com/photo-1554415707-6e8cfc93fe23?w=600&q=80"><span class="catalog-item-badge">Finance</span></div>
+            <div class="catalog-item-info">
+              <h4>Facturation & Devis Auto</h4>
+              <p>Générez devis, factures et suivis de paiement en 1 clic.</p>
+              <span class="catalog-item-price">32 000 FCFA</span>
+              <button class="catalog-order-btn" onclick="orderProduct('Facturation & Devis Auto', '32 000 FCFA')"><i class="fab fa-whatsapp"></i> Commander</button>
+            </div>
+          </div>
+          <div class="catalog-item">
+            <div class="catalog-item-image"><img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&q=80"><span class="catalog-item-badge">Sur Mesure</span></div>
+            <div class="catalog-item-info">
+              <h4>Application Sur Mesure</h4>
+              <p>Développons ensemble l'outil Excel parfait pour votre activité.</p>
+              <span class="catalog-item-price">Sur devis</span>
+              <button class="catalog-order-btn" onclick="orderProduct('Application Sur Mesure', 'Sur devis')"><i class="fab fa-whatsapp"></i> Devis</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+
+  <!-- MODAL FORMATION (PRIX CORRIGÉS) -->
   <div id="catalog-training" class="modal">
     <div class="modal-content">
       <div class="modal-header">
         <h2><i class="fas fa-graduation-cap"></i> Formations Excel</h2>
-        <p>Devenez expert en gestion de données, à votre rythme</p>
-        <button class="modal-close" onclick="closeCatalog('training')" aria-label="Fermer"><i class="fas fa-times"></i></button>
+        <p>Devenez expert en gestion de données</p>
+        <button class="modal-close" onclick="closeCatalog('training')"><i class="fas fa-times"></i></button>
       </div>
-      <div class="modal-body"><div class="catalog-grid"><!-- Vos items catalogue ici --></div></div>
+      <div class="modal-body">
+        <div class="catalog-grid">
+          <div class="catalog-item">
+            <div class="catalog-item-image"><img src="https://images.unsplash.com/photo-1543269664-76bc3997d9ea?w=600&q=80"><span class="catalog-item-badge">Débutant</span></div>
+            <div class="catalog-item-info">
+              <h4>Excel Essentiel</h4>
+              <p>Les bases : saisie, formules simples, mise en forme. 2 séances de 2h.</p>
+              <span class="catalog-item-price">50 000 FCFA</span>
+              <button class="catalog-order-btn" onclick="orderProduct('Formation Excel Essentiel', '50 000 FCFA')"><i class="fab fa-whatsapp"></i> S'inscrire</button>
+            </div>
+          </div>
+          <div class="catalog-item">
+            <div class="catalog-item-image"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&q=80"><span class="catalog-item-badge">Intermédiaire</span></div>
+            <div class="catalog-item-info">
+              <h4>Excel Professionnel</h4>
+              <p>Tableaux croisés, RECHERCHEV, SI, mise en forme conditionnelle. 4 séances.</p>
+              <span class="catalog-item-price">70 000 FCFA</span>
+              <button class="catalog-order-btn" onclick="orderProduct('Formation Excel Professionnel', '70 000 FCFA')"><i class="fab fa-whatsapp"></i> S'inscrire</button>
+            </div>
+          </div>
+          <div class="catalog-item">
+            <div class="catalog-item-image"><img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&q=80"><span class="catalog-item-badge">Expert</span></div>
+            <div class="catalog-item-info">
+              <h4>Excel Avancé & VBA</h4>
+              <p>Macros, automatisation, tableaux de bord dynamiques.</p>
+              <span class="catalog-item-price">100 000 FCFA</span>
+              <button class="catalog-order-btn" onclick="orderProduct('Formation Excel Avancé & VBA', '100 000 FCFA')"><i class="fab fa-whatsapp"></i> S'inscrire</button>
+            </div>
+          </div>
+          <div class="catalog-item">
+            <div class="catalog-item-image"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&q=80"><span class="catalog-item-badge">1-to-1</span></div>
+            <div class="catalog-item-info">
+              <h4>Coaching Individuel</h4>
+              <p>Accompagnement personnalisé sur vos projets réels.</p>
+              <span class="catalog-item-price">50 000 FCFA / séance</span>
+              <button class="catalog-order-btn" onclick="orderProduct('Coaching Individuel Excel', '50 000 FCFA / séance')"><i class="fab fa-whatsapp"></i> Réserver</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+
+  <!-- MODAL MAINTENANCE INFORMATIQUE -->
+  <div id="catalog-maintenance" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2><i class="fas fa-tools"></i> Maintenance Informatique Software</h2>
+        <p>Maintenance, dépannage et optimisation de vos systèmes</p>
+        <button class="modal-close" onclick="closeCatalog('maintenance')"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <div class="catalog-grid">
+          <div class="catalog-item">
+            <div class="catalog-item-image"><img src="https://images.unsplash.com/photo-1597872252165-4827e15293ab?w=600&q=80"><span class="catalog-item-badge">Installation</span></div>
+            <div class="catalog-item-info">
+              <h4>Installation & Configuration Logiciels</h4>
+              <p>Installation de systèmes d'exploitation, suites bureautiques, antivirus et logiciels métiers. Configuration optimale.</p>
+              <span class="catalog-item-price">30 000 FCFA</span>
+              <button class="catalog-order-btn" onclick="orderProduct('Installation & Configuration Logiciels', '30 000 FCFA')"><i class="fab fa-whatsapp"></i> Commander</button>
+            </div>
+          </div>
+          <div class="catalog-item">
+            <div class="catalog-item-image"><img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80"><span class="catalog-item-badge">Dépannage</span></div>
+            <div class="catalog-item-info">
+              <h4>Dépannage & Résolution de Bugs</h4>
+              <p>Diagnostic et réparation de problèmes logiciels, erreurs système, conflits d'applications, plantages.</p>
+              <span class="catalog-item-price">35 000 FCFA</span>
+              <button class="catalog-order-btn" onclick="orderProduct('Dépannage & Résolution Bugs', '35 000 FCFA')"><i class="fab fa-whatsapp"></i> Commander</button>
+            </div>
+          </div>
+          <div class="catalog-item">
+            <div class="catalog-item-image"><img src="https://images.unsplash.com/photo-1544197150-b99a580bbcbf?w=600&q=80"><span class="catalog-item-badge">Mise à jour</span></div>
+            <div class="catalog-item-info">
+              <h4>Mise à Jour Systèmes & Logiciels</h4>
+              <p>Updates Windows, drivers, logiciels de sécurité. Migrations de version et compatibilité.</p>
+              <span class="catalog-item-price">30 000 FCFA</span>
+              <button class="catalog-order-btn" onclick="orderProduct('Mise à Jour Systèmes', '30 000 FCFA')"><i class="fab fa-whatsapp"></i> Commander</button>
+            </div>
+          </div>
+          <div class="catalog-item">
+            <div class="catalog-item-image"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80"><span class="catalog-item-badge">Optimisation</span></div>
+            <div class="catalog-item-info">
+              <h4>Optimisation Performances PC</h4>
+              <p>Nettoyage disque, défragmentation, suppression malware, optimisation démarrage et RAM.</p>
+              <span class="catalog-item-price">40 000 FCFA</span>
+              <button class="catalog-order-btn" onclick="orderProduct('Optimisation Performances PC', '40 000 FCFA')"><i class="fab fa-whatsapp"></i> Commander</button>
+            </div>
+          </div>
+          <div class="catalog-item">
+            <div class="catalog-item-image"><img src="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?w=600&q=80"><span class="catalog-item-badge">Sauvegarde</span></div>
+            <div class="catalog-item-info">
+              <h4>Sauvegarde & Récupération Données</h4>
+              <p>Backup complet, récupération fichiers supprimés, restauration après crash. Sécurisation cloud.</p>
+              <span class="catalog-item-price">45 000 FCFA</span>
+              <button class="catalog-order-btn" onclick="orderProduct('Sauvegarde & Récupération Données', '45 000 FCFA')"><i class="fab fa-whatsapp"></i> Commander</button>
+            </div>
+          </div>
+          <div class="catalog-item">
+            <div class="catalog-item-image"><img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&q=80"><span class="catalog-item-badge">Maintenance</span></div>
+            <div class="catalog-item-info">
+              <h4>Maintenance Préventive Mensuelle</h4>
+              <p>Forfait mensuel : mises à jour, nettoyages, vérifications sécurité, support prioritaire.</p>
+              <span class="catalog-item-price">50 000 FCFA/mois</span>
+              <button class="catalog-order-btn" onclick="orderProduct('Maintenance Préventive Mensuelle', '50 000 FCFA/mois')"><i class="fab fa-whatsapp"></i> Souscrire</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL DATA ANALYST -->
+  <div id="catalog-data" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2><i class="fas fa-chart-line"></i> Data Analyst</h2>
+        <p>Transformez vos données en décisions stratégiques</p>
+        <button class="modal-close" onclick="closeCatalog('data')"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body">
+        <div class="catalog-grid">
+          <div class="catalog-item">
+            <div class="catalog-item-image"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80"><span class="catalog-item-badge">Analyse</span></div>
+            <div class="catalog-item-info">
+              <h4>Analyse de Données Commerciale</h4>
+              <p>Analyse des ventes, tendances, segmentation clients, prévisions. Rapports détaillés avec recommandations.</p>
+              <span class="catalog-item-price">50 000 FCFA</span>
+              <button class="catalog-order-btn" onclick="orderProduct('Analyse de Données Commerciale', '50 000 FCFA')"><i class="fab fa-whatsapp"></i> Commander</button>
+            </div>
+          </div>
+          <div class="catalog-item">
+            <div class="catalog-item-image"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80"><span class="catalog-item-badge">Dashboard</span></div>
+            <div class="catalog-item-info">
+              <h4>Tableaux de Bord Interactifs</h4>
+              <p>Création de dashboards dynamiques avec Power BI ou Excel avancé. Visualisations en temps réel.</p>
+              <span class="catalog-item-price">60 000 FCFA</span>
+              <button class="catalog-order-btn" onclick="orderProduct('Tableaux de Bord Interactifs', '60 000 FCFA')"><i class="fab fa-whatsapp"></i> Commander</button>
+            </div>
+          </div>
+          <div class="catalog-item">
+            <div class="catalog-item-image"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80"><span class="catalog-item-badge">Rapports</span></div>
+            <div class="catalog-item-info">
+              <h4>Rapports Analytiques Automatisés</h4>
+              <p>Génération automatique de rapports périodiques (quotidiens, hebdomadaires, mensuels) avec insights.</p>
+              <span class="catalog-item-price">55 000 FCFA</span>
+              <button class="catalog-order-btn" onclick="orderProduct('Rapports Analytiques Automatisés', '55 000 FCFA')"><i class="fab fa-whatsapp"></i> Commander</button>
+            </div>
+          </div>
+          <div class="catalog-item">
+            <div class="catalog-item-image"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80"><span class="catalog-item-badge">Nettoyage</span></div>
+            <div class="catalog-item-info">
+              <h4>Nettoyage & Organisation Données</h4>
+              <p>Data cleaning, suppression doublons, standardisation formats, structuration bases de données.</p>
+              <span class="catalog-item-price">35 000 FCFA</span>
+              <button class="catalog-order-btn" onclick="orderProduct('Nettoyage & Organisation Données', '35 000 FCFA')"><i class="fab fa-whatsapp"></i> Commander</button>
+            </div>
+          </div>
+          <div class="catalog-item">
+            <div class="catalog-item-image"><img src="https://images.unsplash.com/photo-1543269664-76bc3997d9ea?w=600&q=80"><span class="catalog-item-badge">Formation</span></div>
+            <div class="catalog-item-info">
+              <h4>Formation Data Analysis</h4>
+              <p>Apprenez à analyser vos données : Excel avancé, Power BI, statistiques descriptives. 5 séances.</p>
+              <span class="catalog-item-price">70 000 FCFA</span>
+              <button class="catalog-order-btn" onclick="orderProduct('Formation Data Analysis', '70 000 FCFA')"><i class="fab fa-whatsapp"></i> S'inscrire</button>
+            </div>
+          </div>
+          <div class="catalog-item">
+            <div class="catalog-item-image"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80"><span class="catalog-item-badge">Audit</span></div>
+            <div class="catalog-item-info">
+              <h4>Audit Data & Recommandations</h4>
+              <p>Analyse complète de votre système de données actuel et plan d'amélioration stratégique.</p>
+              <span class="catalog-item-price">45 000 FCFA</span>
+              <button class="catalog-order-btn" onclick="orderProduct('Audit Data & Recommandations', '45 000 FCFA')"><i class="fab fa-whatsapp"></i> Commander</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL OPTIMISATION -->
   <div id="catalog-optimization" class="modal">
     <div class="modal-content">
       <div class="modal-header">
         <h2><i class="fas fa-cogs"></i> Optimisation de Fichiers Excel</h2>
-        <p>Transformez vos fichiers existants en outils puissants et sécurisés</p>
-        <button class="modal-close" onclick="closeCatalog('optimization')" aria-label="Fermer"><i class="fas fa-times"></i></button>
+        <p>Transformez vos fichiers existants en outils puissants</p>
+        <button class="modal-close" onclick="closeCatalog('optimization')"><i class="fas fa-times"></i></button>
       </div>
-      <div class="modal-body"><div class="catalog-grid"><!-- Vos items catalogue ici --></div></div>
+      <div class="modal-body">
+        <div class="catalog-grid">
+          <div class="catalog-item">
+            <div class="catalog-item-image"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80"><span class="catalog-item-badge">Sécurité</span></div>
+            <div class="catalog-item-info">
+              <h4>Sécurisation & Protection</h4>
+              <p>Verrouillage cellules, mots de passe, restrictions d'accès.</p>
+              <span class="catalog-item-price">20 000 FCFA</span>
+              <button class="catalog-order-btn" onclick="orderProduct('Sécurisation Fichier Excel', '20 000 FCFA')"><i class="fab fa-whatsapp"></i> Commander</button>
+            </div>
+          </div>
+          <div class="catalog-item">
+            <div class="catalog-item-image"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80"><span class="catalog-item-badge">Automatisation</span></div>
+            <div class="catalog-item-info">
+              <h4>Automatisation de Tâches</h4>
+              <p>Macros pour importer, nettoyer, calculer automatiquement.</p>
+              <span class="catalog-item-price">30 000 FCFA</span>
+              <button class="catalog-order-btn" onclick="orderProduct('Automatisation Tâches Excel', '30 000 FCFA')"><i class="fab fa-whatsapp"></i> Commander</button>
+            </div>
+          </div>
+          <div class="catalog-item">
+            <div class="catalog-item-image"><img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&q=80"><span class="catalog-item-badge">Dashboard</span></div>
+            <div class="catalog-item-info">
+              <h4>Tableau de Bord Dynamique</h4>
+              <p>Indicateurs visuels interactifs, graphiques, KPI, filtres.</p>
+              <span class="catalog-item-price">45 000 FCFA</span>
+              <button class="catalog-order-btn" onclick="orderProduct('Tableau de Bord Dynamique', '45 000 FCFA')"><i class="fab fa-whatsapp"></i> Commander</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+
+  <!-- MODAL SUPPORT -->
   <div id="catalog-support" class="modal">
     <div class="modal-content">
       <div class="modal-header">
         <h2><i class="fas fa-headset"></i> Support & Conseil Expert</h2>
         <p>Un accompagnement humain pour maximiser votre productivité</p>
-        <button class="modal-close" onclick="closeCatalog('support')" aria-label="Fermer"><i class="fas fa-times"></i></button>
+        <button class="modal-close" onclick="closeCatalog('support')"><i class="fas fa-times"></i></button>
       </div>
-      <div class="modal-body"><div class="catalog-grid"><!-- Vos items catalogue ici --></div></div>
+      <div class="modal-body">
+        <div class="catalog-grid">
+          <div class="catalog-item">
+            <div class="catalog-item-image"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80"><span class="catalog-item-badge">Gratuit</span></div>
+            <div class="catalog-item-info">
+              <h4>Consultation Initiale</h4>
+              <p>30 minutes offertes pour analyser vos besoins.</p>
+              <span class="catalog-item-price">Gratuit</span>
+              <button class="catalog-order-btn" onclick="orderProduct('Consultation Initiale Gratuite', 'Gratuit')"><i class="fab fa-whatsapp"></i> Réserver</button>
+            </div>
+          </div>
+          <div class="catalog-item">
+            <div class="catalog-item-image"><img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=600&q=80"><span class="catalog-item-badge">Support</span></div>
+            <div class="catalog-item-info">
+              <h4>Support Technique</h4>
+              <p>Assistance à distance pour résoudre vos problèmes.</p>
+              <span class="catalog-item-price">8 000 FCFA / intervention</span>
+              <button class="catalog-order-btn" onclick="orderProduct('Support Technique', '8 000 FCFA')"><i class="fab fa-whatsapp"></i> Aide</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- ========== À PROPOS ========== -->
   <section class="about" id="about">
     <div class="section-title">
       <h2>À Propos de SmartSheet Solution</h2>
@@ -838,72 +893,67 @@
     </div>
     <div class="about-content">
       <div class="about-text">
-        <h3>Expertise Excel au service de votre réussite</h3>
-        <p>Chez <strong>SmartSheet Solution</strong>, nous transformons Excel en un véritable outil stratégique pour votre activité. Que vous soyez entrepreneur, manager ou professionnel indépendant, nous concevons des solutions sur-mesure qui simplifient votre quotidien.</p>
-        <p>Notre approche : écouter vos besoins, concevoir des outils intuitifs, et vous former pour que vous soyez autonome. Parce que la technologie doit servir l'humain, pas l'inverse.</p>
+        <h3>Expertise multi-domaines au service de votre réussite</h3>
+        <p>Chez <strong>SmartSheet Solution</strong>, nous offrons une gamme complète de services : Excel, formations, maintenance informatique et data analysis. Que vous soyez entrepreneur, manager ou professionnel indépendant, nous concevons des solutions sur-mesure.</p>
+        <p>Notre approche : écouter vos besoins, concevoir des outils intuitifs, et vous former pour que vous soyez autonome.</p>
         <div class="values">
-          <div class="value-item fade-in"><i class="fas fa-bolt"></i><h4>Efficacité</h4><p>Gagnez du temps grâce à l'automatisation intelligente</p></div>
-          <div class="value-item fade-in"><i class="fas fa-shield-alt"></i><h4>Sécurité</h4><p>Vos données protégées avec des accès contrôlés</p></div>
-          <div class="value-item fade-in"><i class="fas fa-lightbulb"></i><h4>Clarté</h4><p>Des interfaces simples pour des décisions éclairées</p></div>
+          <div class="value-item fade-in"><i class="fas fa-bolt"></i><h4>Efficacité</h4><p>Gagnez du temps grâce à l'automatisation</p></div>
+          <div class="value-item fade-in"><i class="fas fa-shield-alt"></i><h4>Sécurité</h4><p>Vos données protégées</p></div>
+          <div class="value-item fade-in"><i class="fas fa-lightbulb"></i><h4>Clarté</h4><p>Des interfaces simples</p></div>
         </div>
       </div>
-      <div class="about-image">
-        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Expertise Excel" loading="lazy">
-      </div>
+      <div class="about-image"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Expertise"></div>
     </div>
   </section>
 
-  <!-- ========== CONTACT ========== -->
   <section class="contact" id="contact">
     <div class="section-title">
       <h2>Contact & Démarrage</h2>
-      <p>Prêt à optimiser votre gestion ? Contactez-nous dès maintenant via WhatsApp</p>
+      <p>Prêt à optimiser votre gestion ? Contactez-nous dès maintenant</p>
     </div>
     <div class="contact-grid">
       <div class="contact-info">
         <div class="contact-item"><i class="fas fa-phone-alt"></i><div><h4>Téléphone</h4><p><a href="tel:+237692930213">+237 6 92 93 02 13</a></p></div></div>
-        <div class="contact-item"><i class="fab fa-whatsapp"></i><div><h4>WhatsApp</h4><p><a href="https://wa.me/237656035929" target="_blank" rel="noopener">+237 6 56 03 59 29</a></p></div></div>
+        <div class="contact-item"><i class="fab fa-whatsapp"></i><div><h4>WhatsApp</h4><p><a href="https://wa.me/237656035929" target="_blank">+237 6 56 03 59 29</a></p></div></div>
         <div class="contact-item"><i class="fas fa-envelope"></i><div><h4>Email</h4><p><a href="mailto:alaneemvoutou@icloud.com">alaneemvoutou@icloud.com</a></p></div></div>
-        <div class="contact-item"><i class="fas fa-map-marker-alt"></i><div><h4>Localisation</h4><p>Cameroun • Services disponibles en ligne & en présentiel</p></div></div>
+        <div class="contact-item"><i class="fas fa-map-marker-alt"></i><div><h4>Localisation</h4><p>Cameroun • Services en ligne & présentiel</p></div></div>
       </div>
       <div class="whatsapp-box">
         <h3><i class="fab fa-whatsapp"></i> Démarrer votre projet</h3>
-        <p>Décrivez brièvement votre besoin et nous vous recontacterons sous 24h avec une proposition adaptée.</p>
+        <p>Décrivez votre besoin et nous vous recontacterons sous 24h.</p>
         <div class="order-form">
           <select id="productCategory">
             <option value="">Sélectionnez un service</option>
             <option value="Application Excel">💻 Application Excel</option>
             <option value="Formation Excel">🎓 Formation Excel</option>
-            <option value="Optimisation de fichier">⚙️ Optimisation de fichier</option>
-            <option value="Support / Conseil">🎧 Support / Conseil</option>
-            <option value="Autre demande">❓ Autre demande</option>
+            <option value="Maintenance Informatique">🔧 Maintenance IT</option>
+            <option value="Data Analyst">📊 Data Analyst</option>
+            <option value="Optimisation de fichier">⚙️ Optimisation</option>
+            <option value="Support / Conseil">🎧 Support</option>
           </select>
           <input type="text" id="customerName" placeholder="Votre nom complet">
-          <textarea id="orderMessage" rows="3" placeholder="Décrivez votre projet ou votre besoin..."></textarea>
-          <button class="whatsapp-btn" onclick="sendPreFilledWhatsApp()"><i class="fab fa-whatsapp"></i> Envoyer ma demande</button>
+          <textarea id="orderMessage" rows="3" placeholder="Décrivez votre projet..."></textarea>
+          <button class="whatsapp-btn" onclick="sendPreFilledWhatsApp()"><i class="fab fa-whatsapp"></i> Envoyer</button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== FOOTER ========== -->
   <footer>
     <div class="logo" style="justify-content: center; margin-bottom: 1rem;">
       <div class="logo-icon"><i class="fas fa-table"></i></div>
       <div class="logo-text" style="color: var(--white);">SmartSheet <span>Solution</span></div>
     </div>
     <div class="social-links">
-      <a href="https://wa.me/237656035929" target="_blank" rel="noopener" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-      <a href="mailto:alaneemvoutou@icloud.com" title="Email"><i class="fas fa-envelope"></i></a>
-      <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-      <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://wa.me/237656035929" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="mailto:alaneemvoutou@icloud.com"><i class="fas fa-envelope"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
     </div>
     <p>&copy; 2026 <strong>SmartSheet Solution</strong>. Tous droits réservés.<br>« Simplifiez. Automatisez. Excellez. »</p>
   </footer>
 
-  <!-- ========== JAVASCRIPT PRINCIPAL ========== -->
+  <!-- JAVASCRIPT -->
   <script>
-    // ===== Navigation mobile =====
     const mobileToggle = document.getElementById('mobileToggle');
     const navMenu = document.getElementById('navMenu');
     mobileToggle.addEventListener('click', () => {
@@ -917,7 +967,6 @@
       });
     });
 
-    // ===== Gestion des modals =====
     function openCatalog(category) {
       const modal = document.getElementById(`catalog-${category}`);
       if (modal) { modal.classList.add('active'); document.body.style.overflow = 'hidden'; }
@@ -932,34 +981,27 @@
       });
     });
 
-    // ===== WhatsApp dynamique =====
     function orderProduct(productName, price) {
       const phone = '237656035929';
-      const message = `Bonjour SmartSheet Solution,\n\nJe souhaite en savoir plus sur :\n\n📦 *${productName}*\n💰 Prix : ${price}\n\nPourriez-vous me confirmer les détails et les modalités ?\n\nMerci !`;
-      window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
+      const message = `Bonjour SmartSheet Solution,\n\nJe souhaite en savoir plus sur :\n\n📦 *${productName}*\n💰 Prix : ${price}\n\nMerci de me confirmer les détails.`;
+      window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
     }
+
     function sendPreFilledWhatsApp() {
       const category = document.getElementById('productCategory').value;
       const name = document.getElementById('customerName').value.trim();
       const details = document.getElementById('orderMessage').value.trim();
-      if (!category) { alert('Veuillez sélectionner un service.'); document.getElementById('productCategory').focus(); return; }
-      if (!name) { alert('Veuillez entrer votre nom.'); document.getElementById('customerName').focus(); return; }
+      if (!category) { alert('Veuillez sélectionner un service.'); return; }
+      if (!name) { alert('Veuillez entrer votre nom.'); return; }
       const phone = '237656035929';
-      let message = `🌟 *NOUVELLE DEMANDE CLIENT* 🌟\n\n👤 Nom : ${name}\n📦 Service : ${category}\n`;
+      let message = `🌟 *NOUVELLE DEMANDE*\n\n👤 Nom : ${name}\n📦 Service : ${category}\n`;
       if (details) message += `📝 Détails : ${details}\n`;
-      message += `\nMerci de me recontacter pour discuter de mon projet. Cordialement.`;
-      window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
+      window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
       document.getElementById('productCategory').value = '';
       document.getElementById('customerName').value = '';
       document.getElementById('orderMessage').value = '';
-      const btn = document.querySelector('.whatsapp-btn');
-      const originalText = btn.innerHTML;
-      btn.innerHTML = '<i class="fas fa-check"></i> Envoyé !';
-      btn.style.background = '#128C7E';
-      setTimeout(() => { btn.innerHTML = originalText; btn.style.background = '#25D366'; }, 2000);
     }
 
-    // ===== Smooth scroll =====
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -967,20 +1009,18 @@
         if (target) {
           navMenu.classList.remove('active');
           mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          target.scrollIntoView({ behavior: 'smooth' });
         }
       });
     });
 
-    // ===== Animation au scroll =====
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-    document.querySelectorAll('.fade-in, .product-card, .value-item, .contact-item, .catalog-item').forEach(el => observer.observe(el));
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in, .product-card, .value-item').forEach(el => observer.observe(el));
 
-    // ===== Escape pour fermer modals =====
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         document.querySelectorAll('.modal.active').forEach(modal => {
@@ -988,83 +1028,50 @@
         });
       }
     });
-
-    // ===== Fallback images =====
-    document.querySelectorAll('img').forEach(img => {
-      img.onerror = function() {
-        this.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300"%3E%3Crect fill="%23f0f9ff" width="400" height="300"/%3E%3Ctext fill="%2393c5fd" font-family="Arial" font-size="16" x="50%25" y="50%25" text-anchor="middle"%3EImage non disponible%3C/text%3E%3C/svg%3E';
-        this.alt = 'Image non disponible';
-      };
-    });
-
-    // ===== Accessibilité focus =====
-    document.addEventListener('DOMContentLoaded', () => {
-      const style = document.createElement('style');
-      style.textContent = `a:focus, button:focus, input:focus, select:focus, textarea:focus { outline: 2px solid var(--secondary); outline-offset: 2px; } a:focus:not(:focus-visible), button:focus:not(:focus-visible) { outline: none; }`;
-      document.head.appendChild(style);
-    });
   </script>
 
-  <!-- ========== 🌙 ARTEMIS CHATBOT - INTELLIGENT & PRÊT ========== -->
+  <!-- ARTEMIS CHATBOT -->
   <button id="artemis-chat-toggle" title="Discuter avec Artemis">💬</button>
   <div id="artemis-chat-window">
     <div class="artemis-header">
       <div class="artemis-avatar">🌙</div>
-      <div class="artemis-title"><h3>Artemis</h3><p>Assistante SmartSheet Solution</p></div>
+      <div class="artemis-title"><h3>Artemis</h3><p>Assistante SmartSheet</p></div>
       <button class="artemis-close" id="artemis-close">×</button>
     </div>
     <div class="artemis-messages" id="artemis-messages">
       <div class="artemis-message artemis-bot">
-        Bonjour ! 👋 Je suis <strong>Artemis</strong>, votre assistante virtuelle chez <strong>SmartSheet Solution</strong>.<br><br>
-        Je peux vous aider avec :<br>• Nos applications Excel sur-mesure<br>• Nos formations personnalisées<br>• L'optimisation de vos fichiers<br>• Ou toute autre question !<br><br>
-        Comment puis-je vous aider aujourd'hui ? ✨
+        Bonjour ! 👋 Je suis <strong>Artemis</strong>.<br><br>
+        Je peux vous aider avec :<br>
+        • Applications Excel<br>
+        • Formations (min 50 000 FCFA)<br>
+        • Maintenance IT (min 30 000 FCFA)<br>
+        • Data Analyst (min 30 000 FCFA)<br><br>
+        Comment puis-je vous aider ? ✨
       </div>
     </div>
     <div class="artemis-typing" id="artemis-typing"><span></span><span></span><span></span></div>
-    <div class="artemis-quick-replies" id="artemis-quick-replies">
-      <button class="artemis-quick-reply" data-msg="Applications Excel">💻 Applications Excel</button>
+    <div class="artemis-quick-replies">
+      <button class="artemis-quick-reply" data-msg="Maintenance IT">🔧 Maintenance</button>
+      <button class="artemis-quick-reply" data-msg="Data Analyst">📊 Data</button>
       <button class="artemis-quick-reply" data-msg="Formations">🎓 Formations</button>
       <button class="artemis-quick-reply" data-msg="Prix">💰 Tarifs</button>
-      <button class="artemis-quick-reply" data-msg="Contact">📞 Contact</button>
     </div>
     <div class="artemis-input-area">
-      <input type="text" id="artemis-input" placeholder="Écrivez votre message..." autocomplete="off">
+      <input type="text" id="artemis-input" placeholder="Votre message...">
       <button id="artemis-send">➤</button>
     </div>
   </div>
 
   <script>
     (function() {
-      const ARTEMIS_CONFIG = {
-        businessName: "SmartSheet Solution",
-        whatsapp: "+237 6 56 03 59 29",
-        phone: "+237 6 92 93 02 13",
-        email: "alaneemvoutou@icloud.com",
-        location: "Cameroun"
-      };
-
       const ARTEMIS_KNOWLEDGE = {
-        greetings: [
-          "Bonjour ! Comment puis-je vous aider aujourd'hui ? 😊",
-          "Salut ! Je suis Artemis, ravie de vous accompagner. Que souhaitez-vous savoir ? ✨",
-          "Bonsoir ! 👋 N'hésitez pas à me poser vos questions sur nos services Excel."
-        ],
-        applications: [
-          `📊 <strong>Applications Excel sur-mesure</strong><br><br>Nous créons des logiciels de gestion personnalisés directement sur Excel :<br>• 📦 Gestion de stocks & inventaires<br>• 💰 Suivi des ventes & facturation<br>• 👥 Gestion RH & paies<br>• 📈 Tableaux de bord financiers<br><br><strong>Avantages :</strong> Interface intuitive, formules intelligentes, macros automatisées.<br><strong>Tarif :</strong> À partir de <strong>25 000 FCFA</strong><br><br><a href="https://wa.me/237656035929" class="artemis-link" target="_blank">👉 Demander un devis sur WhatsApp</a>`
-        ],
-        formations: [
-          `🎓 <strong>Formations Excel Personnalisées</strong><br><br>Devenez expert en Excel avec nos formations adaptées à votre niveau :<br><br><strong>🔹 Débutant :</strong> Bases d'Excel, formules essentielles<br><strong>🔹 Intermédiaire :</strong> RECHERCHEV, tableaux croisés dynamiques<br><strong>🔹 Expert :</strong> Macros & VBA, automatisation poussée<br><br><strong>Tarif :</strong> À partir de <strong>15 000 FCFA</strong><br><a href="https://wa.me/237656035929" class="artemis-link" target="_blank">👉 Réserver ma formation</a>`
-        ],
-        pricing: [
-          `💰 <strong>Nos Tarifs</strong><br><br><strong>📦 Applications Excel :</strong><br>• Pack Découverte : 25 000 FCFA<br>• Pack Pro : 50 000 - 100 000 FCFA<br><strong>🎓 Formations :</strong><br>• Session Individuelle : 15 000 FCFA / 2h<br>• Pack 5 sessions : 65 000 FCFA<br><br><a href="https://wa.me/237656035929" class="artemis-link" target="_blank">👉 Discuter d'un projet sur WhatsApp</a>`
-        ],
-        contact: [
-          `📞 <strong>Contactez SmartSheet Solution</strong><br><br><strong>📱 WhatsApp :</strong> <a href="https://wa.me/237656035929" class="artemis-link" target="_blank">+237 6 56 03 59 29</a><br><strong>📞 Téléphone :</strong> <a href="tel:+237692930213" class="artemis-link">+237 6 92 93 02 13</a><br><strong>✉️ Email :</strong> <a href="mailto:alaneemvoutou@icloud.com" class="artemis-link">alaneemvoutou@icloud.com</a><br><strong>📍 Localisation :</strong> Cameroun<br><br><em>🚀 Réponse garantie sous 24h</em>`
-        ],
-        default: [
-          "Merci pour votre message ! 🙏 Pour une réponse précise, contactez-nous directement :",
-          `<a href="https://wa.me/237656035929" class="artemis-link" target="_blank">📱 WhatsApp : +237 6 56 03 59 29</a><br><br>Notre équipe vous répondra sous 24h. ✨`
-        ]
+        greetings: ["Bonjour ! Comment puis-je vous aider ? 😊", "Salut ! Je suis Artemis. Que souhaitez-vous savoir ? ✨"],
+        maintenance: ["🔧 <strong>Maintenance Informatique</strong><br><br>Nous offrons :<br>• Installation logiciels : 30 000 FCFA<br>• Dépannage : 35 000 FCFA<br>• Optimisation PC : 40 000 FCFA<br>• Sauvegarde données : 45 000 FCFA<br>• Maintenance mensuelle : 50 000 FCFA/mois<br><br><a href='https://wa.me/237656035929' class='artemis-link' target='_blank'>👉 Commander sur WhatsApp</a>"],
+        data: ["📊 <strong>Data Analyst</strong><br><br>Nos services :<br>• Analyse données : 50 000 FCFA<br>• Tableaux de bord : 60 000 FCFA<br>• Rapports auto : 55 000 FCFA<br>• Nettoyage données : 35 000 FCFA<br>• Formation Data : 70 000 FCFA<br><br><a href='https://wa.me/237656035929' class='artemis-link' target='_blank'>👉 Commander sur WhatsApp</a>"],
+        formations: ["🎓 <strong>Formations Excel</strong><br><br>Nos tarifs (mis à jour) :<br>• Excel Essentiel : 50 000 FCFA<br>• Excel Pro : 70 000 FCFA<br>• Excel Avancé & VBA : 100 000 FCFA<br>• Coaching : 50 000 FCFA/séance<br><br><a href='https://wa.me/237656035929' class='artemis-link' target='_blank'>👉 S'inscrire</a>"],
+        pricing: ["💰 <strong>Tarifs Complets</strong><br><br><strong>Excel :</strong> 25 000 - 100 000 FCFA<br><strong>Formations :</strong> 50 000 - 100 000 FCFA<br><strong>Maintenance IT :</strong> 30 000 - 50 000 FCFA<br><strong>Data Analyst :</strong> 30 000 - 70 000 FCFA<br><br><a href='https://wa.me/237656035929' class='artemis-link' target='_blank'>👉 Devis personnalisé</a>"],
+        contact: ["📞 <strong>Contact</strong><br><br>📱 WhatsApp : <a href='https://wa.me/237656035929' class='artemis-link'>+237 6 56 03 59 29</a><br>📞 Tél : +237 6 92 93 02 13<br>✉️ Email : alaneemvoutou@icloud.com<br><br>Réponse sous 24h ! 🚀"],
+        default: ["Merci ! 🙏 Contactez-nous : <a href='https://wa.me/237656035929' class='artemis-link' target='_blank'>📱 WhatsApp</a><br>Nous répondons sous 24h. ✨"]
       };
 
       const toggleBtn = document.getElementById('artemis-chat-toggle');
@@ -1085,18 +1092,18 @@
         messagesContainer.scrollTop = messagesContainer.scrollHeight;
       }
 
-      function showTyping() { typingIndicator.style.display = 'block'; messagesContainer.scrollTop = messagesContainer.scrollHeight; }
+      function showTyping() { typingIndicator.style.display = 'block'; }
       function hideTyping() { typingIndicator.style.display = 'none'; }
       function getRandomResponse(responses) { return responses[Math.floor(Math.random() * responses.length)]; }
 
-      function generateResponse(userMessage) {
-        const msg = userMessage.toLowerCase().trim();
-        if (/^(bonjour|salut|hello|hi|coucou)/i.test(msg)) return getRandomResponse(ARTEMIS_KNOWLEDGE.greetings);
-        if (/application|logiciel|outil|excel|gestion|stock|vente|rh/i.test(msg)) return getRandomResponse(ARTEMIS_KNOWLEDGE.applications);
-        if (/formation|apprendre|cours|expert|débutant|vba|macro/i.test(msg)) return getRandomResponse(ARTEMIS_KNOWLEDGE.formations);
-        if (/prix|tarif|coût|combien|devis/i.test(msg)) return getRandomResponse(ARTEMIS_KNOWLEDGE.pricing);
-        if (/contact|whatsapp|téléphone|email|appeler/i.test(msg)) return getRandomResponse(ARTEMIS_KNOWLEDGE.contact);
-        if (/merci|remerci|au revoir|bye|à bientôt/i.test(msg)) return "Avec plaisir ! 😊 N'hésitez pas à revenir si vous avez d'autres questions. ✨";
+      function generateResponse(msg) {
+        const lower = msg.toLowerCase();
+        if (/^(bonjour|salut|hello)/i.test(lower)) return getRandomResponse(ARTEMIS_KNOWLEDGE.greetings);
+        if (/maintenance|informatique|software|dépannage|installation/i.test(lower)) return getRandomResponse(ARTEMIS_KNOWLEDGE.maintenance);
+        if (/data|analyst|analytique|dashboard|rapport/i.test(lower)) return getRandomResponse(ARTEMIS_KNOWLEDGE.data);
+        if (/formation|apprendre|cours|excel/i.test(lower)) return getRandomResponse(ARTEMIS_KNOWLEDGE.formations);
+        if (/prix|tarif|coût|combien/i.test(lower)) return getRandomResponse(ARTEMIS_KNOWLEDGE.pricing);
+        if (/contact|whatsapp|téléphone|email/i.test(lower)) return getRandomResponse(ARTEMIS_KNOWLEDGE.contact);
         return getRandomResponse(ARTEMIS_KNOWLEDGE.default);
       }
 
@@ -1105,10 +1112,7 @@
         addMessage(message, true);
         inputField.value = '';
         showTyping();
-        setTimeout(() => {
-          hideTyping();
-          addMessage(generateResponse(message));
-        }, 800 + Math.random() * 700);
+        setTimeout(() => { hideTyping(); addMessage(generateResponse(message)); }, 800);
       }
 
       toggleBtn.addEventListener('click', () => {
@@ -1117,31 +1121,12 @@
         toggleBtn.style.display = chatOpen ? 'none' : 'flex';
         if (chatOpen) inputField.focus();
       });
-      closeBtn.addEventListener('click', () => {
-        chatOpen = false;
-        chatWindow.style.display = 'none';
-        toggleBtn.style.display = 'flex';
-      });
+      closeBtn.addEventListener('click', () => { chatOpen = false; chatWindow.style.display = 'none'; toggleBtn.style.display = 'flex'; });
       sendBtn.addEventListener('click', () => handleUserMessage(inputField.value));
       inputField.addEventListener('keypress', (e) => { if (e.key === 'Enter') handleUserMessage(inputField.value); });
       quickReplies.forEach(btn => btn.addEventListener('click', () => handleUserMessage(btn.getAttribute('data-msg'))));
-      
-      document.addEventListener('click', (e) => {
-        if (chatOpen && !chatWindow.contains(e.target) && e.target !== toggleBtn && window.innerWidth < 768) {
-          chatOpen = false; chatWindow.style.display = 'none'; toggleBtn.style.display = 'flex';
-        }
-      });
-      document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && chatOpen) closeBtn.click(); });
-      
-      setTimeout(() => {
-        if (!chatOpen && !sessionStorage.getItem('artemis_visited')) {
-          toggleBtn.title = "Artemis est là pour vous aider !";
-          sessionStorage.setItem('artemis_visited', 'true');
-        }
-      }, 5000);
     })();
   </script>
-  <!-- ✅ FIN ARTEMIS CHATBOT -->
 
 </body>
 </html>
