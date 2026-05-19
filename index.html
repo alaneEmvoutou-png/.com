@@ -535,6 +535,101 @@
     @media (max-width: 480px) {
       #artemis-chat-window { width: calc(100vw-40px); right: 20px; bottom: 90px; }
     }
+
+    /* ===== TOAST DE BIENVENUE MOBILE ===== */
+    .welcome-toast {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: linear-gradient(135deg, #2563eb, #1e40af);
+      color: white;
+      padding: 12px 16px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      z-index: 10000;
+      max-width: 90%;
+      width: 340px;
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .welcome-toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+    
+    .toast-content {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .toast-icon {
+      font-size: 24px;
+    }
+    
+    .toast-text {
+      flex: 1;
+      font-size: 13px;
+      line-height: 1.3;
+    }
+    
+    .toast-text strong {
+      display: block;
+      margin-bottom: 2px;
+    }
+    
+    .toast-text p {
+      margin: 0;
+      opacity: 0.9;
+      font-size: 12px;
+    }
+    
+    .toast-close {
+      background: rgba(255,255,255,0.2);
+      border: none;
+      color: white;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+    
+    .toast-close:hover {
+      background: rgba(255,255,255,0.3);
+    }
+    
+    .toast-progress {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      background: rgba(255,255,255,0.4);
+      border-radius: 0 0 12px 12px;
+      animation: progress 5s linear forwards;
+    }
+    
+    @keyframes progress {
+      from { width: 100%; }
+      to { width: 0%; }
+    }
+    
+    @media (max-width: 360px) {
+      .welcome-toast {
+        width: 95%;
+        padding: 10px 14px;
+      }
+      .toast-text {
+        font-size: 12px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1063,6 +1158,19 @@
     <p>&copy; 2026 <strong>SmartSheet Solution</strong>. Tous droits réservés.<br>« Simplifiez. Automatisez. Excellez. »</p>
   </footer>
 
+  <!-- ========== TOAST DE BIENVENUE MOBILE (HTML) ========== -->
+  <div id="welcome-toast" class="welcome-toast">
+    <div class="toast-content">
+      <span class="toast-icon">👋</span>
+      <div class="toast-text">
+        <strong>Bienvenue chez SmartSheet !</strong>
+        <p>Besoin d'aide ? Artemis est disponible 💬</p>
+      </div>
+      <button class="toast-close" onclick="closeToast()">&times;</button>
+    </div>
+    <div class="toast-progress"></div>
+  </div>
+
   <!-- ========== JAVASCRIPT ========== -->
   <script>
     const mobileToggle = document.getElementById('mobileToggle');
@@ -1139,6 +1247,31 @@
         });
       }
     });
+
+    // ===== FONCTIONS TOAST DE BIENVENUE =====
+    function showWelcomeToast() {
+      if (!localStorage.getItem('smartSheetToastShown')) {
+        const toast = document.getElementById('welcome-toast');
+        setTimeout(() => {
+          toast.classList.add('show');
+        }, 1500);
+        setTimeout(() => {
+          closeToast();
+        }, 6500);
+        localStorage.setItem('smartSheetToastShown', 'true');
+      }
+    }
+    
+    function closeToast() {
+      const toast = document.getElementById('welcome-toast');
+      toast.classList.remove('show');
+    }
+    
+    document.addEventListener('DOMContentLoaded', showWelcomeToast);
+    
+    document.getElementById('artemis-chat-toggle')?.addEventListener('click', () => {
+      closeToast();
+    });
   </script>
 
   <!-- ✅ GESTION DU THÈME CLAIR/SOMBRE -->
@@ -1210,7 +1343,6 @@
         data: ["📊 <strong>Data Analyst</strong><br><br>Nos services :<br>• Analyse données : 50 000 FCFA<br>• Tableaux de bord : 60 000 FCFA<br>• Rapports auto : 55 000 FCFA<br>• Nettoyage données : 35 000 FCFA<br>• Formation Data : 70 000 FCFA<br><br><a href='https://wa.me/237656035929' class='artemis-link' target='_blank'>👉 Commander sur WhatsApp</a>"],
         formations: ["🎓 <strong>Formations Excel</strong><br><br>Nos tarifs (mis à jour) :<br>• Excel Essentiel : 50 000 FCFA<br>• Excel Pro : 70 000 FCFA<br>• Excel Avancé & VBA : 100 000 FCFA<br>• Coaching : 50 000 FCFA/séance<br><br><a href='https://wa.me/237656035929' class='artemis-link' target='_blank'>👉 S'inscrire</a>"],
         pricing: ["💰 <strong>Tarifs Complets</strong><br><br><strong>Excel :</strong> 25 000 - 100 000 FCFA<br><strong>Formations :</strong> 50 000 - 100 000 FCFA<br><strong>Maintenance IT :</strong> 30 000 - 50 000 FCFA<br><strong>Data Analyst :</strong> 30 000 - 70 000 FCFA<br><br><a href='https://wa.me/237656035929' class='artemis-link' target='_blank'>👉 Devis personnalisé</a>"],
-        // ✅ CONTACT MIS À JOUR (email + Instagram)
         contact: [
           "📞 <strong>Contact</strong><br><br>" +
           "📱 WhatsApp : <a href='https://wa.me/237656035929' class='artemis-link'>+237 6 56 03 59 29</a><br>" +
